@@ -1,0 +1,799 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+      <!--
+This HTML is auto-generated from an M-file.
+To make changes, update the M-file and republish this document.
+      -->
+      <title>TP1varelasofia</title>
+      <meta name="generator" content="MATLAB 7.7">
+      <meta name="date" content="2015-04-01">
+      <meta name="m-file" content="TP1varelasofia"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head>
+   <body>
+      <div class="content">
+         <h2>Contents</h2>
+         <div>
+            <ul>
+               <li><a href="#1">Procesamiento Digital de Se&ntilde;ales - TP1 - Sof&iacute;a Ayel&eacute;n Varela</a></li>
+               <li><a href="#2">Ejercicio 1</a></li>
+               <li><a href="#6">Ejercicio 2</a></li>
+               <li><a href="#9">Ejercicio 3</a></li>
+               <li><a href="#14">Ejercicio 4</a></li>
+               <li><a href="#19">Ejercicio 6</a></li>
+               <li><a href="#25">Ejercicio 8</a></li>
+               <li><a href="#27">Ejercicio 10</a></li>
+               <li><a href="#29">Ejercicio 11</a></li>
+            </ul>
+         </div>
+         <h2>Procesamiento Digital de Se&ntilde;ales - TP1 - Sof&iacute;a Ayel&eacute;n Varela<a name="1"></a></h2><pre class="codeinput"><span class="comment">%Colaboraciones: Agustina G&oacute;mez de la Fuente; Facundo Peloso.</span>
+</pre><h2>Ejercicio 1<a name="2"></a></h2><pre class="codeinput"><span class="comment">%DELTA DE KRONECKER</span>
+<span class="comment">%[y,tiempo]=Delta_Kronecker(L,fs)</span>
+[deltak,tiempod]=Delta_Kronecker(100,20);
+figure
+stem(tiempod,deltak,<span class="string">'b'</span>)
+title(<span class="string">'Delta Kronecker'</span>)
+xlabel(<span class="string">'n'</span>)
+ylabel(<span class="string">'Y'</span>)
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_01.png" alt=""> <pre class="codeinput"><span class="comment">%ESCALON UNITARIO</span>
+<span class="comment">%[y,tiempo]=Escalon_Unitario(L,fs,t0)</span>
+[escalon,tiempoe]=Escalon_Unitario(100,20,5);
+figure
+stem(tiempoe,escalon,<span class="string">'m'</span>)
+title(<span class="string">'Escalon unitario'</span>)
+xlabel(<span class="string">'n'</span>)
+ylabel(<span class="string">'Y'</span>)
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_02.png" alt=""> <pre class="codeinput"><span class="comment">%RAMPA UNITARIA</span>
+<span class="comment">%[y,tiempo]=Rampa_Unitaria(L,fs)</span>
+[rampa,tiempor]=Rampa_Unitaria(100,20);
+figure
+stem(tiempor,rampa,<span class="string">'r'</span>)
+title(<span class="string">'Rampa unitaria'</span>)
+xlabel(<span class="string">'n'</span>)
+ylabel(<span class="string">'Y'</span>)
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_03.png" alt=""> <pre class="codeinput">clear <span class="string">all</span>
+</pre><h2>Ejercicio 2<a name="6"></a></h2><pre class="codeinput"><span class="comment">%DIENTE DE SERRUCHO</span>
+<span class="comment">%[y,tiempo]=Diente_Serrucho(L,fs,P,A)</span>
+[diente,tiempod]=Diente_Serrucho(100,20000,13,7);
+figure
+stem(tiempod,diente,<span class="string">'c'</span>)
+title(<span class="string">'Diente de serrucho'</span>)
+xlabel(<span class="string">'n'</span>)
+ylabel(<span class="string">'Y'</span>)
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_04.png" alt=""> <pre class="codeinput"><span class="comment">%FUNCI&Oacute;N CUADRADA</span>
+<span class="comment">%[y,tiempo]=Cuadrada(L,fs,P,A)</span>
+[cuadrada,tiempoc]=Cuadrada(100,20000,13,7);
+figure
+stem(tiempoc,cuadrada,<span class="string">'m'</span>)
+title(<span class="string">'Cuadrada'</span>)
+xlabel(<span class="string">'n'</span>)
+ylabel(<span class="string">'Y'</span>)
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_05.png" alt=""> <pre class="codeinput">clear <span class="string">all</span>
+</pre><h2>Ejercicio 3<a name="9"></a></h2><pre class="codeinput"><span class="comment">%SENOIDAL DISCRETA</span>
+<span class="comment">%[y,n]=Senoidal_Discreta(Ni,Nf,A,w0,fi)</span>
+
+[sen1,n1]=Senoidal_Discreta(0,25,3,pi/17,0);
+figure
+stem(n1,sen1)
+title(<span class="string">'Senoidal discreta 1'</span>)
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_06.png" alt=""> <pre class="codeinput">[sen2,n2]=Senoidal_Discreta(-15,25,3,pi/17,0);
+figure
+stem(n2,sen2)
+title(<span class="string">'Senoidal discreta 2'</span>)
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_07.png" alt=""> <pre class="codeinput">[sen3,n3]=Senoidal_Discreta(-10,10,5,3*pi,pi/2);
+figure
+stem(n3,sen3)
+title(<span class="string">'Senoidal discreta 3'</span>)
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_08.png" alt=""> <pre class="codeinput">[sen4,n4]=Senoidal_Discreta(0,50,1,pi/sqrt(23),pi);
+figure
+stem(n4,sen4)
+title(<span class="string">'Senoidal discreta 4'</span>)
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_09.png" alt=""> <pre class="codeinput">clear <span class="string">all</span>
+</pre><h2>Ejercicio 4<a name="14"></a></h2><pre class="codeinput"><span class="comment">%SENOIDAL CONTINUA</span>
+<span class="comment">%[y,tiempo]=Senoidal_Continua(fs,A,fo,fi,t0,tf)</span>
+
+<span class="comment">%a)fs=10fo</span>
+Senoidal_Continua(100,4,5,0,0,10);
+<span class="comment">%No se observa con claridad el gr&aacute;fico</span>
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_10.png" alt=""> <pre class="codeinput"><span class="comment">%b)fs=4.5fo</span>
+Senoidal_Continua(100,4,2.25,0,0,10);
+<span class="comment">%Comienza a diferenciarse un poco la funci&oacute;n seno, pero aun se</span>
+<span class="comment">%observa con dificultad</span>
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_11.png" alt=""> <pre class="codeinput"><span class="comment">%c)fs=2fo</span>
+Senoidal_Continua(100,4,1,0,0,10);
+<span class="comment">%Ya se reconoce la funci&oacute;n seno, aunque los per&iacute;odos se observan cortos</span>
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_12.png" alt=""> <pre class="codeinput"><span class="comment">%d)fs=fo/3</span>
+Senoidal_Continua(100,10,1/6,0,0,10);
+<span class="comment">%Se reconoce claramente la funci&oacute;n seno</span>
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_13.png" alt=""> <pre class="codeinput">clear <span class="string">all</span>
+</pre><h2>Ejercicio 6<a name="19"></a></h2><pre class="codeinput"><span class="comment">%%a)Desarrollo anal&iacute;tico</span>
+
+A = IMREAD(<span class="string">'6a1.jpg'</span>);
+figure;IMSHOW(A)
+</pre><pre class="codeoutput">Warning: Could not find an exact (case-sensitive) match for 'IMREAD'.
+C:\Program Files\MATLAB\R2008b\toolbox\matlab\imagesci\imread.m is a case-insensitive match and will be used instead.
+You can improve the performance of your code by using exact
+name matches and we therefore recommend that you update your
+usage accordingly. Alternatively, you can disable this warning using
+warning('off','MATLAB:dispatcher:InexactCaseMatch').
+This warning will become an error in future releases. 
+Warning: Could not find an exact (case-sensitive) match for 'IMSHOW'.
+C:\Program Files\MATLAB\R2008b\toolbox\images\imuitools\imshow.m is a case-insensitive match and will be used instead.
+You can improve the performance of your code by using exact
+name matches and we therefore recommend that you update your
+usage accordingly. Alternatively, you can disable this warning using
+warning('off','MATLAB:dispatcher:InexactCaseMatch').
+This warning will become an error in future releases. 
+Warning: Image is too big to fit on screen; displaying at 17% 
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_14.png" alt=""> <pre class="codeinput">B = IMREAD(<span class="string">'6a2.jpg'</span>);
+figure;IMSHOW(B)
+</pre><pre class="codeoutput">Warning: Image is too big to fit on screen; displaying at 17% 
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_15.png" alt=""> <pre class="codeinput">C = IMREAD(<span class="string">'6a3.jpg'</span>);
+figure;IMSHOW(C)
+</pre><pre class="codeoutput">Warning: Image is too big to fit on screen; displaying at 17% 
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_16.png" alt=""> <pre class="codeinput"><span class="comment">%%b)</span>
+<span class="comment">%Dk=Coeficientes vector y[n-k]</span>
+<span class="comment">%Pk=Coeficientes vector x[n-k]</span>
+
+<span class="comment">%ECUACI&Oacute;N 1</span>
+
+D1=[1,0,0.9];
+P1=[0.3,0.6,0.3];
+<span class="comment">%Defino vector X para filtrar</span>
+X1=zeros(1,128); <span class="comment">%Vector respuesta al impulso h[n] es de largo N=128</span>
+X1(1)=1;
+<span class="comment">%Y=FILTER(B,A,X): Respuesta al impulso ante entrada delta[n]</span>
+Y1f=filter(P1,D1,X1);
+<span class="comment">%Respuesta al impulso utilizando la convoluci&oacute;n</span>
+Y1c=conv(X1,Y1f);
+
+<span class="comment">%ECUACI&Oacute;N 2</span>
+
+D2=[1,1.8*cos(pi/16),0.81];
+P2=[1,0.5,0];
+<span class="comment">%Defino vector X para filtrar</span>
+X2=zeros(1,128); <span class="comment">%Vector respuesta al impulso h[n] es de largo N=128</span>
+X2(1)=1;
+<span class="comment">%Y=FILTER(B,A,X): Respuesta al impulso ante entrada delta[n]</span>
+Y2f=filter(P2,D2,X2);
+<span class="comment">%Respuesta al impulso utilizando la convoluci&oacute;n</span>
+Y2c=conv(X2,Y2f);
+
+<span class="comment">%Gr&aacute;fico ambas respuestas</span>
+figure
+stem(Y1f,<span class="string">'m'</span>);
+title(<span class="string">'Respuesta al impulso h[n]'</span>);
+xlabel(<span class="string">'n'</span>);
+ylabel(<span class="string">'h[n]'</span>);
+hold <span class="string">on</span>
+stem(Y1c,<span class="string">':'</span>,<span class="string">'c'</span>);
+hold <span class="string">off</span>
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_17.png" alt=""> <pre class="codeinput">figure
+stem(Y2f,<span class="string">'m'</span>);
+title(<span class="string">'Respuesta al impulso h[n]'</span>);
+xlabel(<span class="string">'n'</span>);
+ylabel(<span class="string">'h[n]'</span>);
+hold <span class="string">on</span>
+stem(Y2c,<span class="string">':'</span>,<span class="string">'c'</span>);
+hold <span class="string">off</span>
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_18.png" alt=""> <pre class="codeinput">clear <span class="string">all</span>
+</pre><h2>Ejercicio 8<a name="25"></a></h2><pre class="codeinput"><span class="comment">%AMPLITUD MODULADA</span>
+<span class="comment">%[y,tiempo]=Amplitud_Modulada(N,Am,Ac,Ts,fm,fc)</span>
+[y_am,tiempo_am]=Amplitud_Modulada(512,10,5,1,1/200,1/20);
+figure
+subplot(2,3,1)
+plot(tiempo_am,y_am,<span class="string">'g'</span>)
+title(<span class="string">'Amplitud Modulada'</span>)
+xlabel(<span class="string">'Tiempo'</span>)
+ylabel(<span class="string">'Y'</span>)
+
+<span class="comment">%FRECUENCIA MODULADA</span>
+<span class="comment">%[y,tiempo]=Frecuencia_Modulada(N,Am,Ac,Ts,fm,fc)</span>
+[y_fm,tiempo_fm]=Frecuencia_Modulada(512,10,5,1,1/200,1/20);
+subplot(2,3,2)
+plot(tiempo_fm,y_fm,<span class="string">'b'</span>)
+title(<span class="string">'Frecuencia Modulada'</span>)
+xlabel(<span class="string">'Tiempo'</span>)
+ylabel(<span class="string">'Y'</span>)
+
+<span class="comment">%FUNCION SAMPLING (SINC)</span>
+<span class="comment">%[y,tiempo]=Funcion_Sampling_Sinc(N,fs,fo,t0)</span>
+[y_sinc,tiempo_sinc]=Funcion_Sampling_Sinc(512,1,1/50,200);
+subplot(2,3,3)
+plot(tiempo_sinc,y_sinc,<span class="string">'r'</span>)
+title(<span class="string">'Funci&oacute;n Sampling (Sinc)'</span>)
+xlabel(<span class="string">'Tiempo'</span>)
+ylabel(<span class="string">'Y'</span>)
+
+<span class="comment">%AMORTIGUADA</span>
+<span class="comment">%[y,tiempo]=Amortiguada(N,Ts,fo,A,alfa)</span>
+[y_amort,tiempo_amort]=Amortiguada(512,1,1/100,10,1/300);
+subplot(2,3,4)
+plot(tiempo_amort,y_amort,<span class="string">'m'</span>)
+title(<span class="string">'Amortiguada'</span>)
+xlabel(<span class="string">'Tiempo'</span>)
+ylabel(<span class="string">'Y'</span>)
+
+<span class="comment">%PULSO</span>
+<span class="comment">%[y,tiempo]=Pulso(N,Ts,A,t0)</span>
+[y_pulso,tiempo_pulso]=Pulso(128,1,10,4);
+subplot(2,3,5)
+plot(tiempo_pulso,y_pulso,<span class="string">'c'</span>)
+title(<span class="string">'Pulso'</span>)
+xlabel(<span class="string">'Tiempo'</span>)
+ylabel(<span class="string">'Y'</span>)
+
+<span class="comment">%EXPONENCIAL</span>
+<span class="comment">%function [y,tiempo]=Exponencial(N,Ts,A,alfa,t0)</span>
+[y_exp,tiempo_exp]=Exponencial(512,1,10,1/300,4);
+subplot(2,3,6)
+plot(tiempo_exp,y_exp,<span class="string">'b'</span>)
+title(<span class="string">'Exponencial'</span>)
+xlabel(<span class="string">'Tiempo'</span>)
+ylabel(<span class="string">'Y'</span>)
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_19.png" alt=""> <pre class="codeinput">clear <span class="string">all</span>
+</pre><h2>Ejercicio 10<a name="27"></a></h2><pre class="codeinput"><span class="comment">%Convoluci&oacute;n discreta de dos se&ntilde;ales discretas</span>
+
+<span class="comment">%Vectores de prueba, descriptos por la funci&oacute;n escal&oacute;n ya definida</span>
+[x,ti]=Escalon_Unitario(6,1,0);
+[h,to]=Escalon_Unitario(3,1,5);
+
+<span class="comment">%Pruebo la funci&oacute;n convoluci&oacute;n provista por Matlab (lineal)</span>
+C=conv(x,h);
+figure
+subplot(2,1,1)
+stem(C,<span class="string">'m'</span>)
+title(<span class="string">'Funci&oacute;n CONV'</span>)
+xlabel(<span class="string">'n'</span>)
+ylabel(<span class="string">'y'</span>)
+
+<span class="comment">%Funci&oacute;n convoluci&oacute;n discreta desarrollada (circular)</span>
+[y,M]=Convolucion_Discreta(x,h);
+subplot(2,1,2)
+stem(y,<span class="string">'c'</span>)
+title(<span class="string">'Funci&oacute;n CONVOLUCION-DISCRETA'</span>)
+xlabel(<span class="string">'n'</span>)
+ylabel(<span class="string">'y'</span>)
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_20.png" alt=""> <pre class="codeinput"><span class="comment">%Al probar con las distintas funciones definidas, no se observan</span>
+<span class="comment">%diferencias en ambos resultados, excepto para el caso de utilizar como</span>
+<span class="comment">%funci&oacute;n h la funcion de Sampling (sinc).</span>
+clear <span class="string">all</span>
+</pre><h2>Ejercicio 11<a name="29"></a></h2><pre class="codeinput"><span class="comment">%Los archivos de audio se reproducen intercalados con los gr&aacute;ficos</span>
+
+<span class="comment">%Abro archivo de audio y extraigo los datos</span>
+yaudio=wavread(<span class="string">'graciastotales.wav'</span>);
+
+<span class="comment">%Tomo s&oacute;lo una de las columnas y convierto a vector fila</span>
+y=yaudio(:,1);
+y=y';
+
+<span class="comment">%Primero normalizo el vector (con valores entre -1 y 1) para tener</span>
+<span class="comment">%valores positivos y la resoluci&oacute;n deseada; luego, realizo el proceso</span>
+<span class="comment">%inverso para que sea un archivo reproducible con el comando sound().</span>
+
+<span class="comment">%---1 bit de resoluci&oacute;n---</span>
+
+<span class="comment">%Ajusto el vector con valores positivos. Sumo 1 para que el valor m&iacute;nimo</span>
+<span class="comment">%quede positivo y divido por dos para ajustarlo al rango (0-1)</span>
+y1=round((y+1)./2);
+figure
+subplot(2,1,1)
+plot(y1(1:5000),<span class="string">'r'</span>)
+title(<span class="string">'Vector normalizado -1 bit-'</span>)
+xlabel(<span class="string">'Tiempo'</span>)
+ylabel(<span class="string">'y'</span>)
+
+<span class="comment">%Pasos inviersos para obtener se&ntilde;al en formato deseado de salida</span>
+y1out=(y1.*2)-1;
+subplot(2,1,2)
+plot(y1out(1:5000),<span class="string">'b'</span>)
+title(<span class="string">'Vector de salida -1 bit-'</span>)
+xlabel(<span class="string">'Tiempo'</span>)
+ylabel(<span class="string">'y'</span>)
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_21.png" alt=""> <pre class="codeinput"><span class="comment">%Reproducci&oacute;n del sonido con 1 bit de resoluci&oacute;n</span>
+sound(y1out,44100);
+
+<span class="comment">%---2 bits de resoluci&oacute;n---</span>
+
+<span class="comment">%Ajusto el vector con valores positivos. Sumo 1 para que el valor m&iacute;nimo</span>
+<span class="comment">%quede positivo y divido por dos para ajustarlo al rango (0-3). Multiplico</span>
+<span class="comment">%por 3</span>
+y2=round(((y+1)./2)*3);
+figure
+subplot(2,1,1)
+plot(y2(1:5000),<span class="string">'r'</span>)
+title(<span class="string">'Vector normalizado -2 bits-'</span>)
+xlabel(<span class="string">'Tiempo'</span>)
+ylabel(<span class="string">'y'</span>)
+
+<span class="comment">%Pasos inviersos para obtener se&ntilde;al en formato deseado de salida</span>
+y2out=((y2/3).*2)-1;
+subplot(2,1,2)
+plot(y2out(1:5000),<span class="string">'b'</span>)
+title(<span class="string">'Vector de salida -2 bits-'</span>)
+xlabel(<span class="string">'Tiempo'</span>)
+ylabel(<span class="string">'y'</span>)
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_22.png" alt=""> <pre class="codeinput"><span class="comment">%Reproducci&oacute;n del sonido con 2 bits de resoluci&oacute;n</span>
+sound(y2out,44100);
+
+<span class="comment">%---4 bits de resoluci&oacute;n---</span>
+
+<span class="comment">%Ajusto el vector con valores positivos. Sumo 1 para que el valor m&iacute;nimo</span>
+<span class="comment">%quede positivo y divido por dos para ajustarlo al rango (0-15). Multiplico</span>
+<span class="comment">%por 15</span>
+y4=round(((y+1)./2)*15);
+figure
+subplot(2,1,1)
+plot(y4(1:5000),<span class="string">'r'</span>)
+title(<span class="string">'Vector normalizado -4 bits-'</span>)
+xlabel(<span class="string">'Tiempo'</span>)
+ylabel(<span class="string">'y'</span>)
+
+<span class="comment">%Pasos inviersos para obtener se&ntilde;al en formato deseado de salida</span>
+y4out=((y2/15).*2)-1;
+subplot(2,1,2)
+plot(y4out(1:5000),<span class="string">'b'</span>)
+title(<span class="string">'Vector de salida -4 bits-'</span>)
+xlabel(<span class="string">'Tiempo'</span>)
+ylabel(<span class="string">'y'</span>)
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_23.png" alt=""> <pre class="codeinput"><span class="comment">%Reproducci&oacute;n del sonido con 4 bits de resoluci&oacute;n</span>
+sound(y4out,44100);
+
+<span class="comment">%---8 bits de resoluci&oacute;n---</span>
+
+<span class="comment">%Ajusto el vector con valores positivos. Sumo 1 para que el valor m&iacute;nimo</span>
+<span class="comment">%quede positivo y divido por dos para ajustarlo al rango (0-255). Multiplico</span>
+<span class="comment">%por 255</span>
+y8=round(((y+1)./2)*255);
+figure
+subplot(2,1,1)
+plot(y8(1:5000),<span class="string">'r'</span>)
+title(<span class="string">'Vector normalizado -8 bits-'</span>)
+xlabel(<span class="string">'Tiempo'</span>)
+ylabel(<span class="string">'y'</span>)
+
+<span class="comment">%Pasos inviersos para obtener se&ntilde;al en formato deseado de salida</span>
+y8out=((y8/255).*2)-1;
+subplot(2,1,2)
+plot(y8out(1:5000),<span class="string">'b'</span>)
+title(<span class="string">'Vector de salida -8 bits-'</span>)
+xlabel(<span class="string">'Tiempo'</span>)
+ylabel(<span class="string">'y'</span>)
+</pre><img vspace="5" hspace="5" src="TP1varelasofia_24.png" alt=""> <pre class="codeinput"><span class="comment">%Reproducci&oacute;n del sonido con 8 bits de resoluci&oacute;n</span>
+sound(y8out,44100);
+clear <span class="string">all</span>
+<span class="comment">%%-------------------------------------------------------------------------</span>
+</pre><p class="footer"><br>
+            Published with MATLAB&reg; 7.7<br></p>
+      </div>
+      <!--
+##### SOURCE BEGIN #####
+%% Procesamiento Digital de Señales - TP1 - Sofía Ayelén Varela
+%Colaboraciones: Agustina Gómez de la Fuente; Facundo Peloso.
+
+%% Ejercicio 1
+
+%DELTA DE KRONECKER
+%[y,tiempo]=Delta_Kronecker(L,fs)
+[deltak,tiempod]=Delta_Kronecker(100,20);
+figure
+stem(tiempod,deltak,'b')
+title('Delta Kronecker')
+xlabel('n')
+ylabel('Y')
+%%
+
+%ESCALON UNITARIO
+%[y,tiempo]=Escalon_Unitario(L,fs,t0)
+[escalon,tiempoe]=Escalon_Unitario(100,20,5);
+figure
+stem(tiempoe,escalon,'m')
+title('Escalon unitario')
+xlabel('n')
+ylabel('Y')
+%%
+
+%RAMPA UNITARIA
+%[y,tiempo]=Rampa_Unitaria(L,fs)
+[rampa,tiempor]=Rampa_Unitaria(100,20);
+figure
+stem(tiempor,rampa,'r')
+title('Rampa unitaria')
+xlabel('n')
+ylabel('Y')
+%%
+clear all
+%% Ejercicio 2
+
+%DIENTE DE SERRUCHO
+%[y,tiempo]=Diente_Serrucho(L,fs,P,A)
+[diente,tiempod]=Diente_Serrucho(100,20000,13,7);
+figure
+stem(tiempod,diente,'c')
+title('Diente de serrucho')
+xlabel('n')
+ylabel('Y')
+%%
+
+%FUNCIÓN CUADRADA
+%[y,tiempo]=Cuadrada(L,fs,P,A)
+[cuadrada,tiempoc]=Cuadrada(100,20000,13,7);
+figure
+stem(tiempoc,cuadrada,'m')
+title('Cuadrada')
+xlabel('n')
+ylabel('Y')
+%%
+clear all
+%% Ejercicio 3
+
+%SENOIDAL DISCRETA
+%[y,n]=Senoidal_Discreta(Ni,Nf,A,w0,fi)
+
+[sen1,n1]=Senoidal_Discreta(0,25,3,pi/17,0);
+figure
+stem(n1,sen1)
+title('Senoidal discreta 1')
+%%
+[sen2,n2]=Senoidal_Discreta(-15,25,3,pi/17,0);
+figure
+stem(n2,sen2)
+title('Senoidal discreta 2')
+%%
+[sen3,n3]=Senoidal_Discreta(-10,10,5,3*pi,pi/2);
+figure
+stem(n3,sen3)
+title('Senoidal discreta 3')
+%%
+[sen4,n4]=Senoidal_Discreta(0,50,1,pi/sqrt(23),pi);
+figure
+stem(n4,sen4)
+title('Senoidal discreta 4')
+%%
+clear all
+%% Ejercicio 4
+
+%SENOIDAL CONTINUA
+%[y,tiempo]=Senoidal_Continua(fs,A,fo,fi,t0,tf)
+
+%a)fs=10fo
+Senoidal_Continua(100,4,5,0,0,10);
+%No se observa con claridad el gráfico
+%%
+%b)fs=4.5fo
+Senoidal_Continua(100,4,2.25,0,0,10);
+%Comienza a diferenciarse un poco la función seno, pero aun se 
+%observa con dificultad
+%%
+%c)fs=2fo
+Senoidal_Continua(100,4,1,0,0,10);
+%Ya se reconoce la función seno, aunque los períodos se observan cortos
+%%
+%d)fs=fo/3
+Senoidal_Continua(100,10,1/6,0,0,10);
+%Se reconoce claramente la función seno
+%%
+clear all
+%% Ejercicio 6
+
+%%a)Desarrollo analítico
+
+A = IMREAD('6a1.jpg'); 
+figure;IMSHOW(A)
+%%
+B = IMREAD('6a2.jpg'); 
+figure;IMSHOW(B)
+%%
+C = IMREAD('6a3.jpg'); 
+figure;IMSHOW(C)
+%%
+
+%%b)
+%Dk=Coeficientes vector y[n-k]
+%Pk=Coeficientes vector x[n-k]
+
+%ECUACIÓN 1
+
+D1=[1,0,0.9]; 
+P1=[0.3,0.6,0.3]; 
+%Defino vector X para filtrar
+X1=zeros(1,128); %Vector respuesta al impulso h[n] es de largo N=128
+X1(1)=1;
+%Y=FILTER(B,A,X): Respuesta al impulso ante entrada delta[n]
+Y1f=filter(P1,D1,X1);
+%Respuesta al impulso utilizando la convolución
+Y1c=conv(X1,Y1f);
+
+%ECUACIÓN 2
+
+D2=[1,1.8*cos(pi/16),0.81];
+P2=[1,0.5,0];
+%Defino vector X para filtrar
+X2=zeros(1,128); %Vector respuesta al impulso h[n] es de largo N=128
+X2(1)=1;
+%Y=FILTER(B,A,X): Respuesta al impulso ante entrada delta[n]
+Y2f=filter(P2,D2,X2);
+%Respuesta al impulso utilizando la convolución
+Y2c=conv(X2,Y2f);
+
+%Gráfico ambas respuestas
+figure
+stem(Y1f,'m');
+title('Respuesta al impulso h[n]');
+xlabel('n');
+ylabel('h[n]');
+hold on
+stem(Y1c,':','c');
+hold off
+%%
+figure
+stem(Y2f,'m');
+title('Respuesta al impulso h[n]');
+xlabel('n');
+ylabel('h[n]');
+hold on
+stem(Y2c,':','c');
+hold off
+%%
+clear all
+%% Ejercicio 8
+
+%AMPLITUD MODULADA
+%[y,tiempo]=Amplitud_Modulada(N,Am,Ac,Ts,fm,fc)
+[y_am,tiempo_am]=Amplitud_Modulada(512,10,5,1,1/200,1/20);
+figure
+subplot(2,3,1)
+plot(tiempo_am,y_am,'g')
+title('Amplitud Modulada')
+xlabel('Tiempo')
+ylabel('Y')
+
+%FRECUENCIA MODULADA
+%[y,tiempo]=Frecuencia_Modulada(N,Am,Ac,Ts,fm,fc)
+[y_fm,tiempo_fm]=Frecuencia_Modulada(512,10,5,1,1/200,1/20);
+subplot(2,3,2)
+plot(tiempo_fm,y_fm,'b')
+title('Frecuencia Modulada')
+xlabel('Tiempo')
+ylabel('Y')
+
+%FUNCION SAMPLING (SINC)
+%[y,tiempo]=Funcion_Sampling_Sinc(N,fs,fo,t0)
+[y_sinc,tiempo_sinc]=Funcion_Sampling_Sinc(512,1,1/50,200);
+subplot(2,3,3)
+plot(tiempo_sinc,y_sinc,'r')
+title('Función Sampling (Sinc)')
+xlabel('Tiempo')
+ylabel('Y')
+
+%AMORTIGUADA
+%[y,tiempo]=Amortiguada(N,Ts,fo,A,alfa)
+[y_amort,tiempo_amort]=Amortiguada(512,1,1/100,10,1/300);
+subplot(2,3,4)
+plot(tiempo_amort,y_amort,'m')
+title('Amortiguada')
+xlabel('Tiempo')
+ylabel('Y')
+
+%PULSO
+%[y,tiempo]=Pulso(N,Ts,A,t0)
+[y_pulso,tiempo_pulso]=Pulso(128,1,10,4);
+subplot(2,3,5)
+plot(tiempo_pulso,y_pulso,'c')
+title('Pulso')
+xlabel('Tiempo')
+ylabel('Y')
+
+%EXPONENCIAL
+%function [y,tiempo]=Exponencial(N,Ts,A,alfa,t0)
+[y_exp,tiempo_exp]=Exponencial(512,1,10,1/300,4);
+subplot(2,3,6)
+plot(tiempo_exp,y_exp,'b')
+title('Exponencial')
+xlabel('Tiempo')
+ylabel('Y')
+
+%%
+clear all
+%% Ejercicio 10
+%Convolución discreta de dos señales discretas
+
+%Vectores de prueba, descriptos por la función escalón ya definida
+[x,ti]=Escalon_Unitario(6,1,0);
+[h,to]=Escalon_Unitario(3,1,5); 
+
+%Pruebo la función convolución provista por Matlab (lineal)
+C=conv(x,h);
+figure
+subplot(2,1,1)
+stem(C,'m')
+title('Función CONV')
+xlabel('n')
+ylabel('y')
+
+%Función convolución discreta desarrollada (circular)
+[y,M]=Convolucion_Discreta(x,h);
+subplot(2,1,2)
+stem(y,'c')
+title('Función CONVOLUCION-DISCRETA')
+xlabel('n')
+ylabel('y')
+%%
+
+%Al probar con las distintas funciones definidas, no se observan 
+%diferencias en ambos resultados, excepto para el caso de utilizar como 
+%función h la funcion de Sampling (sinc). 
+clear all
+%% Ejercicio 11
+%Los archivos de audio se reproducen intercalados con los gráficos
+
+%Abro archivo de audio y extraigo los datos
+yaudio=wavread('graciastotales.wav');
+
+%Tomo sólo una de las columnas y convierto a vector fila
+y=yaudio(:,1);
+y=y';
+
+%Primero normalizo el vector (con valores entre -1 y 1) para tener 
+%valores positivos y la resolución deseada; luego, realizo el proceso
+%inverso para que sea un archivo reproducible con el comando sound().
+
+%REPLACE_WITH_DASH_DASH-1 bit de resoluciónREPLACE_WITH_DASH_DASH-
+
+%Ajusto el vector con valores positivos. Sumo 1 para que el valor mínimo
+%quede positivo y divido por dos para ajustarlo al rango (0-1)
+y1=round((y+1)./2); 
+figure
+subplot(2,1,1)
+plot(y1(1:5000),'r')
+title('Vector normalizado -1 bit-')
+xlabel('Tiempo')
+ylabel('y')
+
+%Pasos inviersos para obtener señal en formato deseado de salida
+y1out=(y1.*2)-1;
+subplot(2,1,2)
+plot(y1out(1:5000),'b')
+title('Vector de salida -1 bit-')
+xlabel('Tiempo')
+ylabel('y')
+%%
+%Reproducción del sonido con 1 bit de resolución
+sound(y1out,44100);
+
+%REPLACE_WITH_DASH_DASH-2 bits de resoluciónREPLACE_WITH_DASH_DASH-
+
+%Ajusto el vector con valores positivos. Sumo 1 para que el valor mínimo
+%quede positivo y divido por dos para ajustarlo al rango (0-3). Multiplico
+%por 3
+y2=round(((y+1)./2)*3); 
+figure
+subplot(2,1,1)
+plot(y2(1:5000),'r')
+title('Vector normalizado -2 bits-')
+xlabel('Tiempo')
+ylabel('y')
+
+%Pasos inviersos para obtener señal en formato deseado de salida
+y2out=((y2/3).*2)-1;
+subplot(2,1,2)
+plot(y2out(1:5000),'b')
+title('Vector de salida -2 bits-')
+xlabel('Tiempo')
+ylabel('y')
+%%
+%Reproducción del sonido con 2 bits de resolución
+sound(y2out,44100);
+
+%REPLACE_WITH_DASH_DASH-4 bits de resoluciónREPLACE_WITH_DASH_DASH-
+
+%Ajusto el vector con valores positivos. Sumo 1 para que el valor mínimo
+%quede positivo y divido por dos para ajustarlo al rango (0-15). Multiplico
+%por 15
+y4=round(((y+1)./2)*15); 
+figure
+subplot(2,1,1)
+plot(y4(1:5000),'r')
+title('Vector normalizado -4 bits-')
+xlabel('Tiempo')
+ylabel('y')
+
+%Pasos inviersos para obtener señal en formato deseado de salida
+y4out=((y2/15).*2)-1;
+subplot(2,1,2)
+plot(y4out(1:5000),'b')
+title('Vector de salida -4 bits-')
+xlabel('Tiempo')
+ylabel('y')
+%%
+%Reproducción del sonido con 4 bits de resolución
+sound(y4out,44100);
+
+%REPLACE_WITH_DASH_DASH-8 bits de resoluciónREPLACE_WITH_DASH_DASH-
+
+%Ajusto el vector con valores positivos. Sumo 1 para que el valor mínimo
+%quede positivo y divido por dos para ajustarlo al rango (0-255). Multiplico
+%por 255
+y8=round(((y+1)./2)*255); 
+figure
+subplot(2,1,1)
+plot(y8(1:5000),'r')
+title('Vector normalizado -8 bits-')
+xlabel('Tiempo')
+ylabel('y')
+
+%Pasos inviersos para obtener señal en formato deseado de salida
+y8out=((y8/255).*2)-1;
+subplot(2,1,2)
+plot(y8out(1:5000),'b')
+title('Vector de salida -8 bits-')
+xlabel('Tiempo')
+ylabel('y')
+%%
+%Reproducción del sonido con 8 bits de resolución
+sound(y8out,44100);
+clear all
+%%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+##### SOURCE END #####
+-->
+   </body>
+</html>

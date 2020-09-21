@@ -1,0 +1,11 @@
+function [y,tiempo]=Diente_Serrucho(L,fs,P,A)
+
+%L: Longitud de la secuencia
+%fs:
+%
+%
+
+N=L/P;
+Ts=(2*pi)/N;
+tiempo=0:Ts:(L-1)*Ts;
+y=A*sawtooth(tiempo);
