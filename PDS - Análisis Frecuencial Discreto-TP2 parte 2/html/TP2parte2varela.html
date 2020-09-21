@@ -1,0 +1,934 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>PDS - TP N&ordm;2 (Parte 2) - Sof&iacute;a Ayel&eacute;n Varela</title><meta name="generator" content="MATLAB 8.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-04-28"><meta name="DC.source" content="TP2parte2varela.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>PDS - TP N&ordm;2 (Parte 2) - Sof&iacute;a Ayel&eacute;n Varela</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Ejercicio 18 - Decimaci&oacute;n</a></li><li><a href="#4">Ejercicio 19 - Decimaci&oacute;n</a></li><li><a href="#9">Ejercicio 20 - Decimaci&oacute;n</a></li><li><a href="#14">Ejercicio 21 - Decimaci&oacute;n</a></li><li><a href="#21">Ejercicio 22 - Interpolaci&oacute;n</a></li><li><a href="#26">Ejercicio 23 - Interpolaci&oacute;n</a></li><li><a href="#34">Ejercicio 24</a></li><li><a href="#42">Ejercicio 25</a></li><li><a href="#48">Ejercicio 26</a></li></ul></div><h2>Ejercicio 18 - Decimaci&oacute;n<a name="1"></a></h2><p>Se&ntilde;al anal&oacute;gica: Xa(t) = e^(-a*t)*u(t)</p><pre class="codeinput"><span class="comment">% Par&aacute;metros de prueba</span>
+Ts=0.1;
+N=100;
+a=0.8;
+w=0:1/(N-1):1;
+
+<span class="keyword">for</span> n=1:N;
+    x(n)=exp(-a*n*Ts);
+<span class="keyword">end</span>
+
+<span class="comment">% Calculo la fft y el m&oacute;dulo y la fase de la fft de la se&ntilde;al</span>
+X=fft(x);
+Xmodulo=abs(X);
+Xfase=angle(X);
+
+<span class="comment">% Gr&aacute;ficos</span>
+figure
+subplot(3,1,1)
+stem(w,x,<span class="string">'r'</span>);title(<span class="string">'Se&ntilde;al anal&oacute;gica'</span>);
+xlabel(<span class="string">'n'</span>); ylabel(<span class="string">'x[n]'</span>);
+subplot(3,1,2)
+stem(w,Xmodulo); title(<span class="string">'M&oacute;dulo de la fft de la se&ntilde;al'</span>)
+xlabel(<span class="string">'w'</span>); ylabel(<span class="string">'|X(w)|'</span>);
+subplot(3,1,3)
+stem(w,Xfase); title(<span class="string">'Fase de la fft de la se&ntilde;al'</span>)
+xlabel(<span class="string">'w'</span>); ylabel(<span class="string">'\phi(X(w))'</span>);
+</pre><img vspace="5" hspace="5" src="TP2parte2varela_01.png" alt=""> <pre class="codeinput">clear();
+</pre><h2>Ejercicio 19 - Decimaci&oacute;n<a name="4"></a></h2><p>Se&ntilde;al anal&oacute;gica: Xa(t) = e^(-a*t)*u(t)</p><pre class="codeinput"><span class="comment">% Par&aacute;metros de prueba</span>
+Ts=0.1;
+N=50;
+a=0.8;
+w=0:1/(N-1):1;
+
+<span class="keyword">for</span> n=1:N;
+    x(n)=exp(-a*n*Ts);
+<span class="keyword">end</span>
+</pre><p>Submuestreo de la se&ntilde;al x[n]</p><pre class="codeinput">Ma=2; Mb=4; Mc=10;
+
+xa=Submuestrear(x,Ma);
+xb=Submuestrear(x,Mb);
+xc=Submuestrear(x,Mc);
+
+Xmodulo=abs(fft(x));
+Xamodulo=abs(fft(xa));
+Xbmodulo=abs(fft(xb));
+Xcmodulo=abs(fft(xc));
+</pre><p>Gr&aacute;ficos</p><pre class="codeinput">figure
+stem(Xmodulo);title(<span class="string">'M&oacute;dulo de la fft de la se&ntilde;al'</span>)
+xlabel(<span class="string">'w'</span>); ylabel(<span class="string">'|X(w)|'</span>);
+figure
+stem(Xamodulo);title(<span class="string">'M&oacute;dulo de la fft de la se&ntilde;al submuestreada con M=2'</span>)
+xlabel(<span class="string">'w'</span>); ylabel(<span class="string">'|X(w)|'</span>);
+figure
+stem(Xbmodulo);title(<span class="string">'M&oacute;dulo de la fft de la se&ntilde;al submuestreada con M=4'</span>)
+xlabel(<span class="string">'w'</span>); ylabel(<span class="string">'|X(w)|'</span>);
+figure
+stem(Xcmodulo);title(<span class="string">'M&oacute;dulo de la fft de la se&ntilde;al submuestreada con M=10'</span>)
+xlabel(<span class="string">'w'</span>); ylabel(<span class="string">'|X(w)|'</span>);
+</pre><img vspace="5" hspace="5" src="TP2parte2varela_02.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_03.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_04.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_05.png" alt=""> <pre class="codeinput">clear();
+</pre><h2>Ejercicio 20 - Decimaci&oacute;n<a name="9"></a></h2><p>Se&ntilde;al anal&oacute;gica: Xa(t) = e^(-a*t)*u(t)</p><pre class="codeinput"><span class="comment">% Par&aacute;metros de prueba</span>
+Ts=0.1;
+N=100;
+a=0.8;
+Ma=2; Mb=4; Mc=10;
+<span class="comment">% Valores de frecuencias de corte est&aacute;n normalizados</span>
+<span class="comment">% si N=100 es equivalente a pi se obtiene que: (wcorte=pi/M)</span>
+wa=50; wb=25; wc=10;
+
+w=0:1/(N-1):1;
+
+<span class="keyword">for</span> n=1:N;
+    x(n)=exp(-a*n*Ts);
+<span class="keyword">end</span>
+
+<span class="comment">% Transformada de la se&ntilde;al a filtrar</span>
+X=fft(x);
+
+<span class="comment">% Filtro pasa bajos de fase cero para cada &aacute;ngulo de corte</span>
+PBa=zeros(1,N);
+PBa(1,1:wa)=1;
+PBb=zeros(1,N);
+PBb(1,1:wb)=1;
+PBc=zeros(1,N);
+PBc(1,1:wc)=1;
+</pre><p>Salidas del sistema para Ma,Mb,Mc</p><pre class="codeinput">V_wa=X.*PBa;
+V_wb=X.*PBb;
+V_wc=X.*PBc;
+</pre><p>Gr&aacute;ficos obtenidos</p><pre class="codeinput">figure
+subplot(2,1,1)
+stem(x);title(<span class="string">'Se&ntilde;al original'</span>);
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'x[n]'</span>);
+subplot(2,1,2)
+stem(w,X);title(<span class="string">'fft de la se&ntilde;al'</span>);
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'X(w)'</span>);
+
+figure
+stem(w,V_wa);title(<span class="string">'Se&ntilde;al filtrada con filtro Pasa Bajos y wcorte=50'</span>);
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'V_wa(w)'</span>);
+figure
+stem(w,V_wb);title(<span class="string">'Se&ntilde;al filtrada con filtro Pasa Bajos y wcorte=25'</span>);
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'V_wb(w)'</span>);
+figure
+stem(w,V_wc);title(<span class="string">'Se&ntilde;al filtrada con filtro Pasa Bajos y wcorte=10'</span>);
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'V_wc(w)'</span>);
+</pre><img vspace="5" hspace="5" src="TP2parte2varela_06.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_07.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_08.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_09.png" alt=""> <pre class="codeinput">clear();
+</pre><h2>Ejercicio 21 - Decimaci&oacute;n<a name="14"></a></h2><p>Se observa una atenuaci&oacute;n en los &uacute;ltimos componentes del m&oacute;dulo respecto al Ejercicio 19.</p><pre class="codeinput"><span class="comment">% Se&ntilde;al anal&oacute;gica: Xa(t) = e^(-a*t)*u(t)</span>
+
+<span class="comment">% Par&aacute;metros de prueba</span>
+Ts=0.1;
+N=100;
+a=0.8;
+Ma=2; Mb=4; Mc=10;
+wa=50; wb=25; wc=10;
+
+<span class="keyword">for</span> n=1:N;
+    x(n)=exp(-a*n*Ts);
+<span class="keyword">end</span>
+
+<span class="comment">% Transformada de la se&ntilde;al a filtrar</span>
+X=fft(x);
+
+<span class="comment">% Filtro pasa bajos de fase cero para cada &aacute;ngulo de corte</span>
+PBa=zeros(1,N);
+PBa(1,1:wa)=1;
+PBb=zeros(1,N);
+PBb(1,1:wb)=1;
+PBc=zeros(1,N);
+PBc(1,1:wc)=1;
+</pre><p>Salidas del sistema para Ma,Mb,Mc</p><pre class="codeinput">V_wa=X.*PBa;
+V_wb=X.*PBb;
+V_wc=X.*PBc;
+</pre><p>Submuestreo las se&ntilde;ales filtradas del Ejercicio 20</p><pre class="codeinput">y_sa=Submuestrear(ifft(V_wa),Ma);
+y_sb=Submuestrear(ifft(V_wb),Mb);
+y_sc=Submuestrear(ifft(V_wc),Mc);
+</pre><p>Transformada de Fourier de las se&ntilde;ales filtradas submuestreadas</p><pre class="codeinput">Y_sa=fft(y_sa);
+Y_sb=fft(y_sb);
+Y_sc=fft(y_sc);
+</pre><p>Gr&aacute;ficos del m&oacute;dulo del espectro en amplitud de las transformadas</p><pre class="codeinput">figure
+stem(abs(Y_sa));
+title(<span class="string">'M&oacute;dulo de la fft de la se&ntilde;al submuestreada con M=2'</span>);
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'|Y(w)|'</span>);
+figure
+stem(abs(Y_sb));
+title(<span class="string">'M&oacute;dulo de la fft de la se&ntilde;al submuestreada con M=4'</span>);
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'|Y(w)|'</span>);
+figure
+stem(abs(Y_sc));
+title(<span class="string">'M&oacute;dulo de la fft de la se&ntilde;al submuestreada con M=10'</span>);
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'|Y(w)|'</span>);
+</pre><img vspace="5" hspace="5" src="TP2parte2varela_10.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_11.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_12.png" alt=""> <pre class="codeinput">clear();
+</pre><h2>Ejercicio 22 - Interpolaci&oacute;n<a name="21"></a></h2><p>Se observa que el bloque sobremuestreador agrega L componentes de alta frecuencia al espectro de Fourier de la se&ntilde;al.</p><pre class="codeinput"><span class="comment">% Se&ntilde;al anal&oacute;gica: Xa(t) = e^(-a*t)*u(t)</span>
+
+<span class="comment">% Par&aacute;metros de prueba</span>
+Ts=0.1;
+N=50;
+a=0.8;
+La=2; Lb=4; Lc=10;
+
+<span class="keyword">for</span> n=1:N;
+    x(n)=exp(-a*n*Ts);
+<span class="keyword">end</span>
+</pre><p>Sobremuestreo la se&ntilde;al x[n]</p><pre class="codeinput">va=Sobremuestrear(x,La);
+vb=Sobremuestrear(x,Lb);
+vc=Sobremuestrear(x,Lc);
+
+<span class="comment">% Transformo las se&ntilde;ales</span>
+Xmodulo=abs(fft(x));
+Vamodulo=abs(fft(va));
+Vbmodulo=abs(fft(vb));
+Vcmodulo=abs(fft(vc));
+</pre><p>Gr&aacute;ficos</p><pre class="codeinput">figure
+stem(Xmodulo);title(<span class="string">'M&oacute;dulo de la fft de la se&ntilde;al'</span>)
+xlabel(<span class="string">'w'</span>); ylabel(<span class="string">'|X(w)|'</span>);
+figure
+stem(Vamodulo);
+title(<span class="string">'M&oacute;dulo de la fft de la se&ntilde;al sobremuestreada con L=2'</span>)
+xlabel(<span class="string">'w'</span>); ylabel(<span class="string">'|X(w)|'</span>);
+figure
+stem(Vbmodulo);
+title(<span class="string">'M&oacute;dulo de la fft de la se&ntilde;al sobremuestreada con L=4'</span>)
+xlabel(<span class="string">'w'</span>); ylabel(<span class="string">'|X(w)|'</span>);
+figure
+stem(Vcmodulo);
+title(<span class="string">'M&oacute;dulo de la fft de la se&ntilde;al sobremuestreada con L=10'</span>)
+xlabel(<span class="string">'w'</span>); ylabel(<span class="string">'|X(w)|'</span>);
+</pre><img vspace="5" hspace="5" src="TP2parte2varela_13.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_14.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_15.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_16.png" alt=""> <pre class="codeinput">clear();
+</pre><h2>Ejercicio 23 - Interpolaci&oacute;n<a name="26"></a></h2><p>Se observa (en los gr&aacute;ficos del m&oacute;dulo del espectro de la se&ntilde;al) que la interpolaci&oacute;n de la se&ntilde;al original se ha conseguido para todos los valores de L.</p><pre class="codeinput"><span class="comment">% Se&ntilde;al anal&oacute;gica: Xa(t) = e^(-a*t)*u(t)</span>
+
+<span class="comment">% Par&aacute;metros de prueba</span>
+Ts=0.1;
+N=100;
+a=0.8;
+La=2; Lb=4; Lc=10;
+
+<span class="keyword">for</span> n=1:N;
+    x(n)=exp(-a*n*Ts);
+<span class="keyword">end</span>
+</pre><p>Sobremuestreo la se&ntilde;al x[n]</p><pre class="codeinput">va=Sobremuestrear(x,La);
+vb=Sobremuestrear(x,Lb);
+vc=Sobremuestrear(x,Lc);
+</pre><p>Transformo las se&ntilde;ales sobremuestreadas</p><pre class="codeinput">X=fft(x);
+Va=fft(va);
+Vb=fft(vb);
+Vc=fft(vc);
+</pre><pre class="codeinput"><span class="comment">%Filtro pasa bajos de fase cero, se debe determinar &aacute;ngulo de corte</span>
+Na=length(Va);
+PBa=zeros(1,Na);
+n_wa=floor(Na/La);
+PBa(1,1:n_wa)=1;
+
+Nb=length(Vb);
+PBb=zeros(1,Nb);
+n_wb=floor(Nb/Lb);
+PBb(1,1:n_wb)=1;
+
+Nc=length(Vc);
+PBc=zeros(1,Nc);
+n_wc=floor(Nc/Lc);
+PBc(1,1:n_wc)=1;
+</pre><p>Aplico los filtros, salidas del sistema:</p><pre class="codeinput">Ya=Va.*PBa;
+Yb=Vb.*PBb;
+Yc=Vc.*PBc;
+</pre><pre class="codeinput"><span class="comment">%Gr&aacute;ficos del m&oacute;dulo del espectro</span>
+w0=0:1/(N-1):1;
+figure
+stem(w0,abs(X),<span class="string">'m'</span>); title(<span class="string">'M&oacute;dulo de la fft de la se&ntilde;al'</span>)
+xlabel(<span class="string">'w'</span>); ylabel(<span class="string">'X(w)'</span>);
+figure
+stem(abs(Ya),<span class="string">'b'</span>);
+title(<span class="string">'M&oacute;dulo de la fft de la se&ntilde;al sobremuestreada con L=2'</span>);
+ylabel(<span class="string">'Y_a(w)'</span>); xlim([0 100]);
+figure
+stem(abs(Yb),<span class="string">'b'</span>);
+title(<span class="string">'M&oacute;dulo de la fft de la se&ntilde;al sobremuestreada con L=4'</span>);
+ylabel(<span class="string">'Y_b(w)'</span>); xlim([0 100]);
+figure
+stem(abs(Yc),<span class="string">'b'</span>);
+title(<span class="string">'M&oacute;dulo de la fft de la se&ntilde;al sobremuestreada con L=10'</span>);
+ylabel(<span class="string">'Y_c(w)'</span>); xlim([0 100]);
+</pre><img vspace="5" hspace="5" src="TP2parte2varela_17.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_18.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_19.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_20.png" alt=""> <pre class="codeinput">clear();
+</pre><h2>Ejercicio 24<a name="34"></a></h2><p>Para probar el funcionamiento de la correlaci&oacute;n desarroll&eacute; dos funciones correlaci&oacute;n. Una, 'Correlacion.m', recibe las se&ntilde;ales y las convoluciona directamente; la otra, 'CorrelacionTransformada', recibe las se&ntilde;ales y aplica la Transformada Discreta de Fourier para realizar la correlaci&oacute;n en espectro de frecuencia (lo pedido en el ejercicio).</p><p>Genero funciones para correlacionar</p><pre class="codeinput">N=20;
+fs=1000;
+fo=50;
+n=1:N;
+w0=2*pi*fo/fs;
+x=sin(w0*n);
+y=sin(w0*n+pi/2);
+
+<span class="comment">%Gr&aacute;fico de las se&ntilde;ales a correlacionar</span>
+figure
+plot(n,x,<span class="string">'m'</span>,n,y,<span class="string">'r'</span>);title(<span class="string">'Se&ntilde;ales a correlacionar'</span>);
+xlabel(<span class="string">'w'</span>); ylabel(<span class="string">'Funci&oacute;n[w]'</span>);
+</pre><img vspace="5" hspace="5" src="TP2parte2varela_21.png" alt=""> <p>Pruebo correlaci&oacute;n entre x e y y comparo con algoritmo predefinido en Matlab</p><pre class="codeinput">[rseno]=Correlacion(x,y);
+[rTseno]=CorrelacionTransformada(x,y);
+[rmatlabseno]=xcorr(x,y);
+</pre><p>Gr&aacute;ficos correlaci&oacute;n</p><pre class="codeinput">figure
+subplot(3,1,1)
+plot(rseno);title(<span class="string">'Funci&oacute;n Correlaci&oacute;n_x_y'</span>);
+xlabel(<span class="string">'n'</span>); ylabel(<span class="string">'Correlaci&oacute;n[n]'</span>);
+subplot(3,1,2)
+plot(rTseno);title(<span class="string">'Funci&oacute;n Correlaci&oacute;nTransformada_x_y'</span>);
+xlabel(<span class="string">'n'</span>); ylabel(<span class="string">'Correlaci&oacute;n[n]'</span>);
+subplot(3,1,3)
+plot(rmatlabseno);title(<span class="string">'Correlaci&oacute;n_x_y Matlab'</span>);
+xlabel(<span class="string">'n'</span>); ylabel(<span class="string">'Correlaci&oacute;n[n]'</span>);
+</pre><img vspace="5" hspace="5" src="TP2parte2varela_22.png" alt=""> <p>Pruebo autocorrelaci&oacute;n de x y comparo con algoritmo predefinido en Matlab</p><pre class="codeinput">[auto]=CorrelacionTransformada(x);
+[automatlab]=xcorr(x);
+</pre><p>Gr&aacute;ficos autocorrelaci&oacute;n</p><pre class="codeinput">figure
+subplot(2,1,1)
+plot(auto);title(<span class="string">'Autocorrelaci&oacute;n_x_x'</span>);
+xlabel(<span class="string">'n'</span>); ylabel(<span class="string">'Correlaci&oacute;n[n]'</span>);
+subplot(2,1,2)
+plot(automatlab);title(<span class="string">'Autocorrelaci&oacute;n_x_x Matlab'</span>);
+xlabel(<span class="string">'n'</span>); ylabel(<span class="string">'Correlaci&oacute;n[n]'</span>);
+</pre><img vspace="5" hspace="5" src="TP2parte2varela_23.png" alt=""> <pre class="codeinput">clear();
+</pre><h2>Ejercicio 25<a name="42"></a></h2><p>Genero funci&oacute;n x</p><pre class="codeinput">N=1024;
+fs=1000;
+fo=1;
+A=5;
+n=1:N;
+w0=2*pi*fo/fs;
+x=A*cos(w0*n); xceros=[x zeros(1,1976)];  <span class="comment">%A&ntilde;ado cant de ceros para que sea</span>
+                                          <span class="comment">%de largo=3000</span>
+
+D=5; <span class="comment">%Distancia=5 km</span>
+v=1500; <span class="comment">%Velocidad=1500 m/s</span>
+t=2*D*1000/v; <span class="comment">%Tiempo</span>
+
+m=t*fs; <span class="comment">%Cantidad de muestras, pasado a tiempo</span>
+
+n2=0:length(xceros)-1; <span class="comment">%Vector para construir y; mismo largo que xceros</span>
+At=1;
+alfa=10^(At/20);
+r=randn(1,length(xceros));
+xc=circshift(xceros,round(m));
+
+y=exp(-alfa.*n2).*xc+r;
+</pre><pre class="codeoutput">Warning: CIRCSHIFT(X,K) with scalar K and where size(X,1)==1 will change
+behavior in future versions. To retain current behavior, use CIRCSHIFT(X,[K,0])
+instead. 
+</pre><p>Gr&aacute;fico de la funci&oacute;n que env&iacute;o y la que recibo</p><pre class="codeinput">figure
+plot(n2,xceros,<span class="string">'b'</span>,n2,y,<span class="string">'r'</span>)
+title(<span class="string">'Se&ntilde;al enviada vs. eco recibido'</span>);
+xlabel(<span class="string">'n'</span>); ylabel(<span class="string">'Funci&oacute;n[n]'</span>);
+legend(<span class="string">'x'</span>,<span class="string">'y'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte2varela_24.png" alt=""> <p>Calculo la correlaci&oacute;n</p><pre class="codeinput">[correlacion]=CorrelacionTransformada(xceros,y);
+figure
+plot(correlacion)
+title(<span class="string">'Correlaci&oacute;n_x_y'</span>);
+xlabel(<span class="string">'n'</span>); ylabel(<span class="string">'Correlaci&oacute;n[n]'</span>);
+</pre><img vspace="5" hspace="5" src="TP2parte2varela_25.png" alt=""> <p>La distancia va a estar definida por la posici&oacute;n del vector correlaci&oacute;n en la que est&aacute; el valor m&aacute;ximo.</p><pre class="codeinput">[valormax,posicion]=max(correlacion);
+
+<span class="comment">% Distancia</span>
+Distancia=(v/1000)*(posicion/fs)   <span class="comment">%Paso la velocidad a km</span>
+</pre><pre class="codeoutput">
+Distancia =
+
+    4.0470
+
+</pre><pre class="codeinput">clear();
+</pre><h2>Ejercicio 26<a name="48"></a></h2><p>Dise&ntilde;o de las ventanas a implementar</p><pre class="codeinput">N=200;
+
+v1=VHanning(N);
+figure
+subplot(2,2,1)
+plot(v1);title(<span class="string">'Ventana Hanning'</span>);
+xlabel(<span class="string">'t'</span>); ylabel(<span class="string">'v(t)'</span>);
+
+v2=VHamming(N);
+subplot(2,2,2)
+plot(v2);title(<span class="string">'Ventana Hamming'</span>);
+xlabel(<span class="string">'t'</span>); ylabel(<span class="string">'v(t)'</span>);
+
+v3=BarlettTriangular(N);
+subplot(2,2,3)
+plot(v3);title(<span class="string">'Ventana Barlett (triangular)'</span>);
+xlabel(<span class="string">'t'</span>); ylabel(<span class="string">'v(t)'</span>);xlim([0 200]);ylim([0 1]);
+
+v4=VBlackman(N);
+subplot(2,2,4)
+plot(v4);title(<span class="string">'Ventana Blackman'</span>);
+xlabel(<span class="string">'t'</span>); ylabel(<span class="string">'v(t)'</span>);
+</pre><img vspace="5" hspace="5" src="TP2parte2varela_26.png" alt=""> <pre class="codeinput"><span class="comment">% Genero funci&oacute;n de prueba</span>
+Ts=0.03;
+n=1:N;
+w0=2*pi*Ts;
+x=sin(w0*n);
+figure
+plot(n,x,<span class="string">'m'</span>);title(<span class="string">'Funci&oacute;n de prueba'</span>);
+xlabel(<span class="string">'t'</span>);ylabel(<span class="string">'x(t)'</span>);
+</pre><img vspace="5" hspace="5" src="TP2parte2varela_27.png" alt=""> <p>Implemento las ventanas</p><pre class="codeinput"><span class="comment">%Hanning</span>
+y1=x.*v1;
+Y1=abs(fft(y1));
+</pre><pre class="codeinput"><span class="comment">%Hamming</span>
+y2=x.*v2;
+Y2=abs(fft(y2));
+</pre><pre class="codeinput"><span class="comment">%Barlett (Triangular)</span>
+y3=x.*v3;
+Y3=abs(fft(y3));
+</pre><pre class="codeinput"><span class="comment">%Blackman</span>
+y4=x.*v4;
+Y4=abs(fft(y4));
+</pre><pre class="codeinput">figure
+plot(Y1);title(<span class="string">'Ventana Hanning'</span>);
+xlabel(<span class="string">'n'</span>); ylabel(<span class="string">'|Y_H_a_n_n_i_n_g[n]|'</span>);
+figure
+plot(Y2);title(<span class="string">'Ventana Hamming'</span>);
+xlabel(<span class="string">'n'</span>); ylabel(<span class="string">'|Y_H_a_m_m_i_n_g[n]|'</span>);
+figure
+plot(Y3);title(<span class="string">'Ventana Barlett'</span>);
+xlabel(<span class="string">'n'</span>); ylabel(<span class="string">'|Y_B_a_r_l_e_t_t[n]|'</span>);
+figure
+plot(Y4);title(<span class="string">'Ventana Blackman'</span>);
+xlabel(<span class="string">'n'</span>); ylabel(<span class="string">'|Y_B_l_a_c_k_m_a_n[n]|'</span>);
+</pre><img vspace="5" hspace="5" src="TP2parte2varela_28.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_29.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_30.png" alt=""> <img vspace="5" hspace="5" src="TP2parte2varela_31.png" alt=""> <pre class="codeinput">clear();
+</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% PDS - TP Nº2 (Parte 2) - Sofía Ayelén Varela
+
+%% Ejercicio 18 - Decimación
+%%
+% Señal analógica: Xa(t) = e^(-a*t)*u(t)
+
+% Parámetros de prueba
+Ts=0.1;
+N=100;
+a=0.8;
+w=0:1/(N-1):1;
+
+for n=1:N;
+    x(n)=exp(-a*n*Ts);
+end
+
+% Calculo la fft y el módulo y la fase de la fft de la señal
+X=fft(x);
+Xmodulo=abs(X);
+Xfase=angle(X);
+
+% Gráficos
+figure
+subplot(3,1,1)
+stem(w,x,'r');title('Señal analógica'); 
+xlabel('n'); ylabel('x[n]');
+subplot(3,1,2)
+stem(w,Xmodulo); title('Módulo de la fft de la señal')
+xlabel('w'); ylabel('|X(w)|');
+subplot(3,1,3)
+stem(w,Xfase); title('Fase de la fft de la señal')
+xlabel('w'); ylabel('\phi(X(w))');
+
+%%
+clear();
+
+%% Ejercicio 19 - Decimación
+%%
+% Señal analógica: Xa(t) = e^(-a*t)*u(t)
+
+% Parámetros de prueba
+Ts=0.1;
+N=50;
+a=0.8;
+w=0:1/(N-1):1;
+
+for n=1:N;
+    x(n)=exp(-a*n*Ts);
+end
+%%
+% Submuestreo de la señal x[n]
+Ma=2; Mb=4; Mc=10;
+
+xa=Submuestrear(x,Ma);
+xb=Submuestrear(x,Mb);
+xc=Submuestrear(x,Mc);
+
+Xmodulo=abs(fft(x));
+Xamodulo=abs(fft(xa));
+Xbmodulo=abs(fft(xb));
+Xcmodulo=abs(fft(xc));
+%%
+% Gráficos
+figure
+stem(Xmodulo);title('Módulo de la fft de la señal')
+xlabel('w'); ylabel('|X(w)|');
+figure
+stem(Xamodulo);title('Módulo de la fft de la señal submuestreada con M=2')
+xlabel('w'); ylabel('|X(w)|');
+figure
+stem(Xbmodulo);title('Módulo de la fft de la señal submuestreada con M=4')
+xlabel('w'); ylabel('|X(w)|');
+figure
+stem(Xcmodulo);title('Módulo de la fft de la señal submuestreada con M=10')
+xlabel('w'); ylabel('|X(w)|');
+%%
+clear();
+
+%% Ejercicio 20 - Decimación
+%%
+% Señal analógica: Xa(t) = e^(-a*t)*u(t)
+
+% Parámetros de prueba
+Ts=0.1;
+N=100;
+a=0.8;
+Ma=2; Mb=4; Mc=10;
+% Valores de frecuencias de corte están normalizados
+% si N=100 es equivalente a pi se obtiene que: (wcorte=pi/M)
+wa=50; wb=25; wc=10;
+
+w=0:1/(N-1):1;
+
+for n=1:N;
+    x(n)=exp(-a*n*Ts);
+end
+
+% Transformada de la señal a filtrar
+X=fft(x);
+
+% Filtro pasa bajos de fase cero para cada ángulo de corte 
+PBa=zeros(1,N);
+PBa(1,1:wa)=1;
+PBb=zeros(1,N);
+PBb(1,1:wb)=1;
+PBc=zeros(1,N);
+PBc(1,1:wc)=1;
+%%
+% Salidas del sistema para Ma,Mb,Mc
+V_wa=X.*PBa;
+V_wb=X.*PBb;
+V_wc=X.*PBc;
+%%
+% Gráficos obtenidos
+figure
+subplot(2,1,1)
+stem(x);title('Señal original');
+xlabel('n');ylabel('x[n]');
+subplot(2,1,2)
+stem(w,X);title('fft de la señal');
+xlabel('w');ylabel('X(w)');
+
+figure
+stem(w,V_wa);title('Señal filtrada con filtro Pasa Bajos y wcorte=50');
+xlabel('w');ylabel('V_wa(w)'); 
+figure
+stem(w,V_wb);title('Señal filtrada con filtro Pasa Bajos y wcorte=25');
+xlabel('w');ylabel('V_wb(w)');
+figure
+stem(w,V_wc);title('Señal filtrada con filtro Pasa Bajos y wcorte=10');
+xlabel('w');ylabel('V_wc(w)'); 
+%%
+clear();
+
+%% Ejercicio 21 - Decimación
+%%
+% Se observa una atenuación en los últimos componentes del módulo respecto 
+% al Ejercicio 19.
+
+% Señal analógica: Xa(t) = e^(-a*t)*u(t)
+
+% Parámetros de prueba
+Ts=0.1;
+N=100;
+a=0.8;
+Ma=2; Mb=4; Mc=10;
+wa=50; wb=25; wc=10;
+
+for n=1:N;
+    x(n)=exp(-a*n*Ts);
+end
+
+% Transformada de la señal a filtrar
+X=fft(x);
+
+% Filtro pasa bajos de fase cero para cada ángulo de corte 
+PBa=zeros(1,N);
+PBa(1,1:wa)=1;
+PBb=zeros(1,N);
+PBb(1,1:wb)=1;
+PBc=zeros(1,N);
+PBc(1,1:wc)=1;
+%%
+% Salidas del sistema para Ma,Mb,Mc
+V_wa=X.*PBa;
+V_wb=X.*PBb;
+V_wc=X.*PBc;
+
+%%
+% Submuestreo las señales filtradas del Ejercicio 20
+y_sa=Submuestrear(ifft(V_wa),Ma);
+y_sb=Submuestrear(ifft(V_wb),Mb);
+y_sc=Submuestrear(ifft(V_wc),Mc);
+%%
+% Transformada de Fourier de las señales filtradas submuestreadas
+Y_sa=fft(y_sa);
+Y_sb=fft(y_sb);
+Y_sc=fft(y_sc);
+%%
+% Gráficos del módulo del espectro en amplitud de las transformadas
+figure
+stem(abs(Y_sa));
+title('Módulo de la fft de la señal submuestreada con M=2');
+xlabel('w');ylabel('|Y(w)|'); 
+figure
+stem(abs(Y_sb));
+title('Módulo de la fft de la señal submuestreada con M=4');
+xlabel('w');ylabel('|Y(w)|'); 
+figure
+stem(abs(Y_sc));
+title('Módulo de la fft de la señal submuestreada con M=10');
+xlabel('w');ylabel('|Y(w)|'); 
+
+%%
+clear();
+
+%% Ejercicio 22 - Interpolación
+%%
+% Se observa que el bloque sobremuestreador agrega L componentes de
+% alta frecuencia al espectro de Fourier de la señal.
+
+% Señal analógica: Xa(t) = e^(-a*t)*u(t)
+
+% Parámetros de prueba
+Ts=0.1;
+N=50;
+a=0.8;
+La=2; Lb=4; Lc=10;
+
+for n=1:N;
+    x(n)=exp(-a*n*Ts);
+end
+%%
+% Sobremuestreo la señal x[n]
+va=Sobremuestrear(x,La);
+vb=Sobremuestrear(x,Lb);
+vc=Sobremuestrear(x,Lc);
+
+% Transformo las señales
+Xmodulo=abs(fft(x));
+Vamodulo=abs(fft(va));
+Vbmodulo=abs(fft(vb));
+Vcmodulo=abs(fft(vc));
+%%
+% Gráficos
+figure
+stem(Xmodulo);title('Módulo de la fft de la señal')
+xlabel('w'); ylabel('|X(w)|');
+figure
+stem(Vamodulo);
+title('Módulo de la fft de la señal sobremuestreada con L=2')
+xlabel('w'); ylabel('|X(w)|');
+figure
+stem(Vbmodulo);
+title('Módulo de la fft de la señal sobremuestreada con L=4')
+xlabel('w'); ylabel('|X(w)|');
+figure
+stem(Vcmodulo);
+title('Módulo de la fft de la señal sobremuestreada con L=10')
+xlabel('w'); ylabel('|X(w)|');
+%%
+clear();
+
+%% Ejercicio 23 - Interpolación
+%%
+% Se observa (en los gráficos del módulo del espectro de la señal) 
+% que la interpolación de la señal original se ha conseguido para todos 
+% los valores de L.
+
+% Señal analógica: Xa(t) = e^(-a*t)*u(t)
+
+% Parámetros de prueba
+Ts=0.1;
+N=100;
+a=0.8;
+La=2; Lb=4; Lc=10;
+
+for n=1:N;
+    x(n)=exp(-a*n*Ts);
+end
+%%
+% Sobremuestreo la señal x[n]
+va=Sobremuestrear(x,La);
+vb=Sobremuestrear(x,Lb);
+vc=Sobremuestrear(x,Lc);
+%%
+% Transformo las señales sobremuestreadas
+X=fft(x);
+Va=fft(va);
+Vb=fft(vb);
+Vc=fft(vc);
+%%
+%Filtro pasa bajos de fase cero, se debe determinar ángulo de corte
+Na=length(Va);
+PBa=zeros(1,Na);
+n_wa=floor(Na/La);
+PBa(1,1:n_wa)=1;
+
+Nb=length(Vb);
+PBb=zeros(1,Nb);
+n_wb=floor(Nb/Lb);
+PBb(1,1:n_wb)=1;
+
+Nc=length(Vc);
+PBc=zeros(1,Nc);
+n_wc=floor(Nc/Lc);
+PBc(1,1:n_wc)=1;
+%%
+% Aplico los filtros, salidas del sistema:
+Ya=Va.*PBa;
+Yb=Vb.*PBb;
+Yc=Vc.*PBc;
+%%
+
+%Gráficos del módulo del espectro
+w0=0:1/(N-1):1;
+figure
+stem(w0,abs(X),'m'); title('Módulo de la fft de la señal')
+xlabel('w'); ylabel('X(w)');
+figure
+stem(abs(Ya),'b');
+title('Módulo de la fft de la señal sobremuestreada con L=2');
+ylabel('Y_a(w)'); xlim([0 100]);
+figure
+stem(abs(Yb),'b'); 
+title('Módulo de la fft de la señal sobremuestreada con L=4');
+ylabel('Y_b(w)'); xlim([0 100]);
+figure
+stem(abs(Yc),'b'); 
+title('Módulo de la fft de la señal sobremuestreada con L=10');
+ylabel('Y_c(w)'); xlim([0 100]);
+%%
+clear();
+
+%% Ejercicio 24
+%%
+% Para probar el funcionamiento de la correlación desarrollé dos funciones
+% correlación. Una, 'Correlacion.m', recibe las señales y las convoluciona
+% directamente; la otra, 'CorrelacionTransformada', recibe las señales y
+% aplica la Transformada Discreta de Fourier para realizar la correlación en
+% espectro de frecuencia (lo pedido en el ejercicio).
+%%
+% Genero funciones para correlacionar
+N=20;
+fs=1000;
+fo=50;
+n=1:N;
+w0=2*pi*fo/fs;
+x=sin(w0*n);
+y=sin(w0*n+pi/2);
+
+%Gráfico de las señales a correlacionar
+figure
+plot(n,x,'m',n,y,'r');title('Señales a correlacionar'); 
+xlabel('w'); ylabel('Función[w]');
+%%
+% Pruebo correlación entre x e y y comparo con algoritmo predefinido en
+% Matlab
+[rseno]=Correlacion(x,y);
+[rTseno]=CorrelacionTransformada(x,y);
+[rmatlabseno]=xcorr(x,y);
+%%
+% Gráficos correlación
+figure
+subplot(3,1,1)
+plot(rseno);title('Función Correlación_x_y'); 
+xlabel('n'); ylabel('Correlación[n]');
+subplot(3,1,2)
+plot(rTseno);title('Función CorrelaciónTransformada_x_y'); 
+xlabel('n'); ylabel('Correlación[n]');
+subplot(3,1,3)
+plot(rmatlabseno);title('Correlación_x_y Matlab'); 
+xlabel('n'); ylabel('Correlación[n]');
+%%
+% Pruebo autocorrelación de x y comparo con algoritmo predefinido en
+% Matlab
+[auto]=CorrelacionTransformada(x);
+[automatlab]=xcorr(x);
+%%
+% Gráficos autocorrelación
+figure
+subplot(2,1,1)
+plot(auto);title('Autocorrelación_x_x'); 
+xlabel('n'); ylabel('Correlación[n]');
+subplot(2,1,2)
+plot(automatlab);title('Autocorrelación_x_x Matlab'); 
+xlabel('n'); ylabel('Correlación[n]');
+%%
+clear();
+
+%% Ejercicio 25
+%%
+% Genero función x
+N=1024;
+fs=1000;
+fo=1;
+A=5;
+n=1:N;
+w0=2*pi*fo/fs;
+x=A*cos(w0*n); xceros=[x zeros(1,1976)];  %Añado cant de ceros para que sea 
+                                          %de largo=3000
+
+D=5; %Distancia=5 km
+v=1500; %Velocidad=1500 m/s
+t=2*D*1000/v; %Tiempo
+
+m=t*fs; %Cantidad de muestras, pasado a tiempo
+
+n2=0:length(xceros)-1; %Vector para construir y; mismo largo que xceros
+At=1;
+alfa=10^(At/20);
+r=randn(1,length(xceros));
+xc=circshift(xceros,round(m));
+
+y=exp(-alfa.*n2).*xc+r;
+%%
+% Gráfico de la función que envío y la que recibo
+figure
+plot(n2,xceros,'b',n2,y,'r')
+title('Señal enviada vs. eco recibido'); 
+xlabel('n'); ylabel('Función[n]');
+legend('x','y')
+%%
+% Calculo la correlación
+[correlacion]=CorrelacionTransformada(xceros,y);
+figure
+plot(correlacion)
+title('Correlación_x_y'); 
+xlabel('n'); ylabel('Correlación[n]');
+%%
+% La distancia va a estar definida por la posición del vector correlación
+% en la que está el valor máximo.
+[valormax,posicion]=max(correlacion);
+
+% Distancia
+Distancia=(v/1000)*(posicion/fs)   %Paso la velocidad a km
+%%
+clear();
+
+%% Ejercicio 26
+%%
+% Diseño de las ventanas a implementar
+N=200;
+
+v1=VHanning(N);
+figure
+subplot(2,2,1)
+plot(v1);title('Ventana Hanning');
+xlabel('t'); ylabel('v(t)');
+
+v2=VHamming(N);
+subplot(2,2,2)
+plot(v2);title('Ventana Hamming');
+xlabel('t'); ylabel('v(t)');
+
+v3=BarlettTriangular(N);
+subplot(2,2,3)
+plot(v3);title('Ventana Barlett (triangular)');
+xlabel('t'); ylabel('v(t)');xlim([0 200]);ylim([0 1]);
+
+v4=VBlackman(N);
+subplot(2,2,4)
+plot(v4);title('Ventana Blackman');
+xlabel('t'); ylabel('v(t)');
+%%
+
+% Genero función de prueba
+Ts=0.03;
+n=1:N;
+w0=2*pi*Ts;
+x=sin(w0*n);
+figure
+plot(n,x,'m');title('Función de prueba');
+xlabel('t');ylabel('x(t)');
+%%
+% Implemento las ventanas
+%%
+%Hanning
+y1=x.*v1;
+Y1=abs(fft(y1));
+%%
+%Hamming
+y2=x.*v2;
+Y2=abs(fft(y2));
+%%
+%Barlett (Triangular)
+y3=x.*v3;
+Y3=abs(fft(y3));
+%%
+%Blackman
+y4=x.*v4;
+Y4=abs(fft(y4));
+%%
+figure
+plot(Y1);title('Ventana Hanning');
+xlabel('n'); ylabel('|Y_H_a_n_n_i_n_g[n]|');
+figure
+plot(Y2);title('Ventana Hamming');
+xlabel('n'); ylabel('|Y_H_a_m_m_i_n_g[n]|');
+figure
+plot(Y3);title('Ventana Barlett');
+xlabel('n'); ylabel('|Y_B_a_r_l_e_t_t[n]|');
+figure
+plot(Y4);title('Ventana Blackman');
+xlabel('n'); ylabel('|Y_B_l_a_c_k_m_a_n[n]|');
+%%
+clear();
+##### SOURCE END #####
+--></body></html>

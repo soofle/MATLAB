@@ -1,0 +1,16 @@
+function [rT]=CorrelacionTransformada(x,y)
+
+if nargin==1 %Es la autocorrelación
+   y=x; 
+end    
+
+n=length(x);
+
+% Transformo las señales
+Y=fft(y,2*n-1);
+X=fft(x,2*n-1);
+
+rT=ifft(conj(X).*Y);
+
+% Para visualizar los resultados
+rT=fftshift(rT);rT=fliplr(rT);
