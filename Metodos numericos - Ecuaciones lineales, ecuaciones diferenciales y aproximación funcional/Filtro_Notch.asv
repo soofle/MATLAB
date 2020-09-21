@@ -1,0 +1,43 @@
+function Filtro_Notch()
+
+t0=0;
+tf=0.1;
+M=100;
+x0=[0 0]';
+
+%[T,Y]=Runge_Kutta_orden_n(funcion_ec_dif,To,Tf,Yo,M)
+
+[t,x]=Runge_Kutta_orden_n('Ec_Dif_Filtro_N',t0,tf,x0,M);
+
+R1=50;
+R2=50;
+L=10*10^(-3);
+C=10^(-6);
+V=5;
+w0=10000;
+
+Vi=V*sin(w0*t);
+
+CMATRIZ=[0 -(R2*R2*R1)/(((R1+R2)^2)*L)];
+D=[R2/(R1+R2)];
+
+
+V0=CMATRIZ*x'+D*Vi;
+subplot(211)
+plot(t,V0,'r')
+subplot(
+t,Vi,'g');
+
+
+%Calculo del tiempo en el que se extingue la salida del circuito
+
+%V0=0.01*5
+
+
+
+%Calculo de la frecuencia de las oscilaciones de la salida
+
+F1=1/(2*pi*(L*C)^(1/2))
+
+
+
