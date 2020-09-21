@@ -1,0 +1,1444 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>PDS - TP N&ordm;2 (Parte 1) - Sof&iacute;a Ayel&eacute;n Varela</title><meta name="generator" content="MATLAB 8.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-04-27"><meta name="DC.source" content="TP2parte1varela.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>PDS - TP N&ordm;2 (Parte 1) - Sof&iacute;a Ayel&eacute;n Varela</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Ejercicio 3</a></li><li><a href="#4">Ejercicio 4</a></li><li><a href="#6">Ejercicio 5</a></li><li><a href="#8">Ejercicio 6</a></li><li><a href="#14">Ejercicio 7</a></li><li><a href="#21">Ejercicio 8</a></li><li><a href="#26">Ejercicio 9</a></li><li><a href="#30">Ejercicio 11</a></li><li><a href="#35">Ejercicio 12</a></li><li><a href="#38">Ejercicio 13</a></li><li><a href="#41">Ejercicio 14</a></li><li><a href="#49">Ejercicio 15</a></li><li><a href="#55">Ejercicio 16</a></li><li><a href="#58">Ejercicio 17</a></li></ul></div><h2>Ejercicio 3<a name="1"></a></h2><pre class="codeinput">L=10;
+a=zeros(1,L);
+a(1)=1;
+a(2)=-1/2;
+a(3:L)=0;
+N=0:L-1; <span class="comment">%vector largo L</span>
+</pre><pre class="codeinput"><span class="comment">%Gr&aacute;fico de la secuencia</span>
+
+figure
+subplot(2,1,1)
+stem(N,a,<span class="string">'m'</span>)
+title(<span class="string">'Se&ntilde;al de entrada'</span>);xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'a[n]'</span>)
+
+A=fft(a); <span class="comment">%Transformada Discreta de Fourier</span>
+A=A.^(-1); <span class="comment">%Inversa</span>
+b=ifft(A); <span class="comment">%Antitransformada</span>
+
+c=conv(a,b); <span class="comment">%Convoluci&oacute;n: debe dar un delta como resultado</span>
+n=0:18; <span class="comment">%Largo N+M-1 de la convoluci&oacute;n</span>
+
+<span class="comment">%Gr&aacute;fico de la convoluci&oacute;n entre la se&ntilde;al y su inversa</span>
+
+subplot(2,1,2)
+stem(n,c,<span class="string">'r'</span>)
+title(<span class="string">'Convoluci&oacute;n de la secuencia con su inversa'</span>);xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'Conv[n]'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_01.png" alt=""> <h2>Ejercicio 4<a name="4"></a></h2><pre class="codeinput">a=[2 5 3];
+n=0:2;
+figure
+subplot(3,1,1)
+stem(n,a,<span class="string">'c'</span>)
+title(<span class="string">'Se&ntilde;al de entrada'</span>);xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'a[n]'</span>)
+
+<span class="comment">%Sobremuestreo</span>
+
+L=2;
+[y,N]=Sobremuestrear(a,L);
+subplot(3,1,2)
+stem(N,y,<span class="string">'m'</span>)
+title(<span class="string">'Se&ntilde;al sobremuestreada con algoritmo propio'</span>);xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'y[n]'</span>)
+
+<span class="comment">%Verifico algoritmo propio con rutina predise&ntilde;ada de Matlab 'upsample'</span>
+
+ymat=upsample(a,2);
+subplot(3,1,3)
+stem(N,y,<span class="string">'r'</span>)
+title(<span class="string">'Se&ntilde;al sobremuestreada con funci&oacute;n upsample'</span>);xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'y[n]'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_02.png" alt=""> <h2>Ejercicio 5<a name="6"></a></h2><pre class="codeinput">a=[1 3 5 7 9 8 6];
+l=0:6;
+figure
+subplot(3,1,1)
+stem(l,a,<span class="string">'c'</span>)
+title(<span class="string">'Se&ntilde;al de entrada'</span>);xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'a[n]'</span>)
+
+<span class="comment">%Submuestreo</span>
+
+M=2;
+[y,N]=Submuestrear(a,M);
+subplot(3,1,2)
+stem(N,y,<span class="string">'m'</span>)
+title(<span class="string">'Se&ntilde;al submuestreada con algoritmo propio'</span>);xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'y[n]'</span>)
+
+<span class="comment">%Verifico algoritmo propio con rutina predise&ntilde;ada de Matlab 'downsample'</span>
+
+ymat=downsample(a,2);
+subplot(3,1,3)
+stem(N,y,<span class="string">'r'</span>)
+title(<span class="string">'Se&ntilde;al submuestreada con funci&oacute;n downsample'</span>);xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'y[n]'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_03.png" alt=""> <h2>Ejercicio 6<a name="8"></a></h2><p>Se tomaron los algoritmos del campus ('DFT.m' y 'graficar.m') y se modific&oacute; su implementaci&oacute;n para el correcto funcionamiento.</p><pre class="codeinput">x=[9 2 3 4 6 5*i]; <span class="comment">%Secuencia compleja de prueba</span>
+
+[X,k,Re,Im,M,F]=TFD(x);
+</pre><p>Verifico el algoritmo dise&ntilde;ado con funci&oacute;n predefinida de Matlab fft</p><pre class="codeinput"><span class="comment">% Gr&aacute;fico de la se&ntilde;al y su TFD</span>
+n=0:5;
+figure
+subplot(3,1,1)
+stem(n,x)
+title(<span class="string">'Secuencia original'</span>)
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'x[n]'</span>)
+subplot(3,1,2)
+stem(k,X)
+title(<span class="string">'TFD de la secuencia'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X[k]'</span>)
+
+<span class="comment">% TFD Matlab</span>
+Xmatlab=fft(x);
+subplot(3,1,3)
+stem(k,Xmatlab)
+title(<span class="string">'fft_M_a_t_l_a_b de la secuencia'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X_M_a_t_l_a_b[k]'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_04.png" alt=""> <pre class="codeinput"><span class="comment">%Gr&aacute;ficos de la parte real e imaginaria de la TFD</span>
+
+figure
+subplot(2,1,1)
+stem(k,Re)
+title(<span class="string">'TFD parte Real'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X_R_e_a_l[k]'</span>)
+subplot(2,1,2)
+stem(k,Im)
+title(<span class="string">'TFD parte Imaginaria'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X_I_m_a_g_i_n_a_r_i_a[k]'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_05.png" alt=""> <pre class="codeinput"><span class="comment">%Gr&aacute;ficos del m&oacute;dulo de la TFD</span>
+
+figure
+subplot(2,1,1)
+stem(k,M)
+title(<span class="string">'TFD M&oacute;dulo'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'|X[k]|'</span>)
+subplot(2,1,2)
+stem(k,20*log10(M))
+title(<span class="string">'TFD M&oacute;dulo en dB'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'|X_d_B[k]|'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_06.png" alt=""> <pre class="codeinput"><span class="comment">%Gr&aacute;ficos de la fase de la TFD</span>
+
+figure
+subplot(2,1,1)
+stem(k,F)
+title(<span class="string">'TFD Fase'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'\phi(X[k])'</span>)
+subplot(2,1,2)
+stem(k,20*log10(F))
+title(<span class="string">'TFD Fase en dB'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'\phi(X[k])_d_B'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_07.png" alt=""> <h2>Ejercicio 7<a name="14"></a></h2><p>Implementaci&oacute;n de la Inversa de la Transformada de Fourier Discreta. Luego, verificaci&oacute;n de que, si la TFD provino de una se&ntilde;al real, la parte imaginaria de su antitransformada debe ser 0 para todo n.</p><pre class="codeinput">X=[9 12 3 8 6 9*i]; <span class="comment">%Secuencia compleja de prueba</span>
+
+[x,n,re,im,m,f]=TFDinversa(X);
+</pre><p>Gr&aacute;fico de la TFD y la secuencia antitransformada</p><pre class="codeinput">k=0:5;
+figure
+subplot(3,1,1)
+stem(k,X)
+title(<span class="string">'TFD'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X[k]'</span>)
+subplot(3,1,2)
+stem(n,x)
+title(<span class="string">'Secuencia antitransformada con TFDinversa'</span>)
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'x[n]'</span>)
+
+<span class="comment">% TFD Matlab</span>
+
+xmatlab=ifft(X);
+subplot(3,1,3)
+stem(n,xmatlab)
+title(<span class="string">'Secuencia antitransformada con ifft_M_a_t_l_a_b'</span>)
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'x_M_a_t_l_a_b[n]'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_08.png" alt=""> <p>Gr&aacute;ficos de la parte real e imaginaria de la TFDinversa</p><pre class="codeinput">figure
+subplot(2,1,1)
+stem(n,re)
+title(<span class="string">'ITFD parte Real'</span>)
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'x_R_e_a_l[n]'</span>)
+subplot(2,1,2)
+stem(n,im)
+title(<span class="string">'ITFD parte Imaginaria'</span>)
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'x_I_m_a_g_i_n_a_r_i_a[n]'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_09.png" alt=""> <p>Gr&aacute;ficos de m&oacute;dulo y fase de la TFDinversa</p><pre class="codeinput">figure
+subplot(2,1,1)
+stem(n,m)
+title(<span class="string">'TFDinversa M&oacute;dulo'</span>)
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'|x[n]|'</span>)
+subplot(2,1,2)
+stem(n,f)
+title(<span class="string">'TFDinversa Fase'</span>)
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'\phi(x[n])'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_10.png" alt=""> <pre class="codeinput"><span class="comment">% Verifico que si TFD es real, la parte imaginaria de su antitransformada</span>
+<span class="comment">% debe ser 0 para todo n</span>
+
+Xre=[9 10 3 4 6 2]; <span class="comment">%Secuencia real de prueba</span>
+
+[x2,n2,re2,im2]=TFDinversa(Xre);
+</pre><p>Gr&aacute;ficos de la parte real e imaginaria de la TFDinversa real</p><pre class="codeinput">figure
+subplot(2,1,1)
+stem(n2,re2)
+title(<span class="string">'ITFD parte Real'</span>)
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'x2_R_e_a_l[n]'</span>)
+subplot(2,1,2)
+stem(n2,im2)
+title(<span class="string">'ITFD parte Imaginaria=0 para todo n'</span>)
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'x2_I_m_a_g_i_n_a_r_i_a[n]'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_11.png" alt=""> <h2>Ejercicio 8<a name="21"></a></h2><pre class="codeinput"><span class="comment">%a)</span>
+Da=[1 0.13 0.52 0.3]; <span class="comment">%y</span>
+Pa=[0.16 -0.48 0.48 -0.16]; <span class="comment">%x</span>
+fvtool(Pa,Da)<span class="comment">%(b-&gt;x, a-&gt;y)</span>
+title(<span class="string">'Filtro pasa altos'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_12.png" alt=""> <pre class="codeinput"><span class="comment">%b)</span>
+Db=[1 0 -0.268];
+Pb=[0.634 0 -0.634];
+fvtool(Pb,Db)<span class="comment">%(b-&gt;x, a-&gt;y)</span>
+title(<span class="string">'Filtro pasa banda'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_13.png" alt=""> <pre class="codeinput"><span class="comment">%c)</span>
+Dc=[1 0 0.268];
+Pc=[0.634 0 +0.634];
+fvtool(Pc,Dc)<span class="comment">%(b-&gt;x, a-&gt;y)</span>
+title(<span class="string">'Filtro Notch'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_14.png" alt=""> <pre class="codeinput"><span class="comment">%d)</span>
+Dd=[10 -5 1];
+Pd=[1 -5 10];
+fvtool(Pd,Dd)<span class="comment">%(b-&gt;x, a-&gt;y)</span>
+title(<span class="string">'Filtro pasa todo'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_15.png" alt=""> <h2>Ejercicio 9<a name="26"></a></h2><pre class="codeinput"><span class="comment">%r: radio</span>
+<span class="comment">%fi: fase</span>
+
+<span class="comment">%Filtro G=1/(1-2*r*cos(fi)*exp(-z)+r^2*exp(-2*z));</span>
+</pre><p>Mismo radio, cambio de fase</p><pre class="codeinput"><span class="comment">%Datos: r=0.8; fi=pi/4</span>
+b=[1];
+a1=[1 -2*0.8*cos(pi/4) 0.8^2];
+fvtool(b,a1,<span class="string">'polezero'</span>)
+title(<span class="string">'r=0.8 fi=pi/4'</span>)
+fvtool(b,a1,<span class="string">'freq'</span>)
+title(<span class="string">'r=0.8 fi=pi/4'</span>)
+legend(<span class="string">'Magnitud'</span>,<span class="string">'Fase'</span>)
+
+<span class="comment">%Datos: r=0.8; fi=pi/2</span>
+a2=[1 -2*0.8*cos(pi/2) 0.8^2];
+fvtool(b,a2,<span class="string">'polezero'</span>)
+title(<span class="string">'r=0.8 fi=pi/2'</span>)
+fvtool(b,a2,<span class="string">'freq'</span>)
+title(<span class="string">'r=0.8 fi=pi/2'</span>)
+legend(<span class="string">'Magnitud'</span>,<span class="string">'Fase'</span>)
+
+<span class="comment">%Datos: r=0.8; fi=7*pi/8</span>
+a3=[1 -2*0.8*cos(7*pi/8) 0.8^2];
+fvtool(b,a3,<span class="string">'polezero'</span>)
+title(<span class="string">'r=0.8 fi=7*pi/8'</span>)
+fvtool(b,a3,<span class="string">'freq'</span>)
+title(<span class="string">'r=0.8 fi=7*pi/8'</span>)
+legend(<span class="string">'Magnitud'</span>,<span class="string">'Fase'</span>)
+</pre><pre class="codeoutput">Warning: A legend has been added to FVTool without using the LEGEND method. Type
+help fvtool for more information. 
+Warning: A legend has been added to FVTool without using the LEGEND method. Type
+help fvtool for more information. 
+Warning: A legend has been added to FVTool without using the LEGEND method. Type
+help fvtool for more information. 
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_16.png" alt=""> <img vspace="5" hspace="5" src="TP2parte1varela_17.png" alt=""> <img vspace="5" hspace="5" src="TP2parte1varela_18.png" alt=""> <img vspace="5" hspace="5" src="TP2parte1varela_19.png" alt=""> <img vspace="5" hspace="5" src="TP2parte1varela_20.png" alt=""> <img vspace="5" hspace="5" src="TP2parte1varela_21.png" alt=""> <p>Misma fase, cambio de radio(fi=pi/2; r=0.8;0.6;0.9)</p><pre class="codeinput"><span class="comment">%Datos: fi=pi/2 r=0.8;</span>
+b=[1];
+a4=[1 -2*0.8*cos(pi/2) 0.8^2];
+fvtool(b,a4,<span class="string">'polezero'</span>)
+title(<span class="string">'r=0.8 fi=pi/2'</span>)
+fvtool(b,a4,<span class="string">'freq'</span>)
+title(<span class="string">'r=0.8 fi=pi/2'</span>)
+legend(<span class="string">'Magnitud'</span>,<span class="string">'Fase'</span>)
+
+<span class="comment">%Datos: fi=pi/2 r=0.6;</span>
+a5=[1 -2*0.6*cos(pi/2) 0.6^2];
+fvtool(b,a5,<span class="string">'polezero'</span>)
+title(<span class="string">'r=0.6 fi=pi/2'</span>)
+fvtool(b,a5,<span class="string">'freq'</span>)
+title(<span class="string">'r=0.6 fi=pi/2'</span>)
+legend(<span class="string">'Magnitud'</span>,<span class="string">'Fase'</span>)
+
+<span class="comment">%Datos: fi=pi/2 r=0.9;</span>
+a6=[1 -2*0.9*cos(pi/2) 0.9^2];
+fvtool(b,a6,<span class="string">'polezero'</span>)
+title(<span class="string">'r=0.9 fi=pi/2'</span>)
+fvtool(b,a6,<span class="string">'freq'</span>)
+title(<span class="string">'r=0.9 fi=pi/2'</span>)
+legend(<span class="string">'Magnitud'</span>,<span class="string">'Fase'</span>)
+</pre><pre class="codeoutput">Warning: A legend has been added to FVTool without using the LEGEND method. Type
+help fvtool for more information. 
+Warning: A legend has been added to FVTool without using the LEGEND method. Type
+help fvtool for more information. 
+Warning: A legend has been added to FVTool without using the LEGEND method. Type
+help fvtool for more information. 
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_22.png" alt=""> <img vspace="5" hspace="5" src="TP2parte1varela_23.png" alt=""> <img vspace="5" hspace="5" src="TP2parte1varela_24.png" alt=""> <img vspace="5" hspace="5" src="TP2parte1varela_25.png" alt=""> <img vspace="5" hspace="5" src="TP2parte1varela_26.png" alt=""> <img vspace="5" hspace="5" src="TP2parte1varela_27.png" alt=""> <h2>Ejercicio 11<a name="30"></a></h2><pre class="codeinput"><span class="comment">%a) Teniendo en cuenta el Teorema de Nyquist (fs&gt;=2*fmax) y</span>
+<span class="comment">%    Ts=1mS (fs=1/1ms=1000Hz), se necesita: fmax=500Hz para evitar el</span>
+<span class="comment">%    solapamiento a la entrada del Filtro Notch.</span>
+
+<span class="comment">%b)</span>
+w0=2*pi/5;
+r = 0.7; <span class="comment">%Radio definido entre 0&lt;r&lt;1</span>
+B=[1 -(exp(-j*w0)+exp(j*w0)) 1];
+A=[1 -r*(exp(-j*w0)+exp(j*w0)) r^2];
+fvtool(B,A,<span class="string">'freq'</span>)
+title(<span class="string">'Respuesta de amplitud y fase'</span>)
+legend(<span class="string">'Magnitud'</span>,<span class="string">'Fase'</span>)
+</pre><pre class="codeoutput">Warning: A legend has been added to FVTool without using the LEGEND method. Type
+help fvtool for more information. 
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_28.png" alt=""> <pre class="codeinput"><span class="comment">%c) y d)</span>
+<span class="comment">%pi - 500Hz (m&aacute;x)</span>
+<span class="comment">%x? - 50Hz (componente a eliminar) =&gt;x=0.1*pi</span>
+
+<span class="comment">%Gr&aacute;fico de la respuesta de amplitud</span>
+w02=0.1*pi;
+<span class="comment">%Mismo radio definido anteriormente</span>
+B2=[1 -(exp(-j*w02)+exp(j*w02)) 1];
+A2=[1 -r*(exp(-j*w02)+exp(j*w02)) r^2];
+fvtool(B2,A2,<span class="string">'magnitude'</span>)
+title(<span class="string">'Respuesta de amplitud del Filtro Notch con w0=pi/10'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_29.png" alt=""> <pre class="codeinput"><span class="comment">%e)Senoidal de 150 muestras con f=50Hz y fs=1000Hz;</span>
+
+N=150;fo=50;fs=1000;
+
+w=2*pi*fo/fs;
+n=1:N;
+
+x=sin(w*n);
+x_filtrada=filter(B2,A2,x);
+
+figure
+subplot(2,1,1)
+stem(n,x)
+title(<span class="string">'Senoidal sin filtro'</span>)
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'x[n]'</span>)
+subplot(2,1,2)
+stem(n,x_filtrada)
+title(<span class="string">'Senoidal con filtro Notch'</span>)
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'x[n]'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_30.png" alt=""> <pre class="codeinput"><span class="comment">%e)</span>
+posicion=Transitorio(x,x_filtrada);
+Ts=1/fs;
+Duracion=posicion*Ts
+</pre><pre class="codeoutput">
+Duracion =
+
+    0.0110
+
+</pre><h2>Ejercicio 12<a name="35"></a></h2><pre class="codeinput">a=[10 -2 4];b=[1 9 -2];
+N=200;
+
+h=impz(b,a,N); <span class="comment">%Respuesta al impulso del sistema b/a</span>
+</pre><p>Retardo de grupo de la respuesta al impulso</p><pre class="codeinput">r=Retardo_Grupo(h,N);
+w=0:(2*pi)/(N-1):2*pi; <span class="comment">%Intervalo 0&lt;w&lt;2*pi</span>
+
+figure
+subplot(2,1,1)
+plot(w,r,<span class="string">'r'</span>)
+title(<span class="string">'Retardo de Grupo con funci&oacute;n propia'</span>)
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'Retardo[w]'</span>)
+
+<span class="comment">% Comparo el algoritmo desarrollado con la funci&oacute;n predefinida grpdelay</span>
+
+[Gd,W]=grpdelay(b,a,N,<span class="string">'whole'</span>); <span class="comment">%'whole' para N puntos en todo</span>
+                                <span class="comment">%el circulo radio unidad</span>
+subplot(2,1,2)
+plot(W,Gd,<span class="string">'m'</span>)
+title(<span class="string">'Retardo de Grupo con funci&oacute;n grpdelay'</span>)
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'Retardo_g_r_p_d_e_l_a_y[w]'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_31.png" alt=""> <h2>Ejercicio 13<a name="38"></a></h2><p>Respuesta al impulso h[n]=delta[n-4]</p><pre class="codeinput">h=[0; 0; 0; 1]; <span class="comment">%Vector columna</span>
+N=length(h);
+r=Retardo_Grupo(h,N);
+
+n=0:N-1;
+figure
+subplot(2,1,1)
+plot(n,r)
+title(<span class="string">'Retardo de Grupo con funci&oacute;n propia'</span>)
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'Retardo[n]'</span>)
+xlim([0 3])
+
+[Gd,W]=grpdelay(h,N);
+subplot(2,1,2)
+plot(W,Gd)
+title(<span class="string">'Retardo de Grupo con funci&oacute;n grpdelay'</span>)
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'Retardo_g_r_p_d_e_l_a_y[n]'</span>)
+xlim([0 3])
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_32.png" alt=""> <h2>Ejercicio 14<a name="41"></a></h2><p>Transformadas Discretas de Fourier de funciones del Ejercicio 8) del TP N&ordm;1. Se visualizan los resultados en M&oacute;dulo y Fase o Parte Real e Imaginaria.</p><p>AMORTIGUADA</p><pre class="codeinput">[amort,n1]=Amortiguada(50,1,1/100,10,1/300);
+[X1,k1,Re1,Im1,M1,F1]=TFD(amort);
+
+figure
+subplot(2,2,1)
+stem(k1,M1)
+title(<span class="string">'TFD Amortiguada - M&oacute;dulo'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'|X[k]|'</span>)
+
+subplot(2,2,2)
+stem(k1,F1)
+title(<span class="string">'TDF Amortiguada - Fase'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'\phi(X[k])'</span>)
+
+subplot(2,2,3)
+stem(k1,Re1)
+title(<span class="string">'TFD Amortiguada - Parte Real'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X[k]_R_e_a_l'</span>)
+
+subplot(2,2,4)
+stem(k1,Im1)
+title(<span class="string">'TDF Amortiguada - Parte Imaginaria'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X[k]_I_m_a_g_i_n_a_r_i_a'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_33.png" alt=""> <p>ESCAL&Oacute;N</p><pre class="codeinput">[esc,n2]=Escalon_Unitario(20,1,0);
+[X2,k2,Re2,Im2,M2,F2]=TFD(esc);
+
+figure
+subplot(2,2,1)
+stem(k2,M2)
+title(<span class="string">'TFD Escal&oacute;n - M&oacute;dulo'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'|X[k]|'</span>)
+
+subplot(2,2,2)
+stem(k2,F2)
+title(<span class="string">'TDF Escal&oacute;n - Fase'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'\phi(X[k])'</span>)
+
+subplot(2,2,3)
+stem(k2,Re2)
+title(<span class="string">'TFD Escal&oacute;n - Parte Real'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X[k]_R_e_a_l'</span>)
+
+subplot(2,2,4)
+stem(k2,Im2)
+title(<span class="string">'TDF Escal&oacute;n - Parte Imaginaria'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X[k]_I_m_a_g_i_n_a_r_i_a'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_34.png" alt=""> <p>SENOIDAL</p><pre class="codeinput">[sen,n3]=Senoidal_Discreta(0,40,3,pi/17,0);
+[X3,k3,Re3,Im3,M3,F3]=TFD(sen);
+
+figure
+subplot(2,2,1)
+stem(k3,M3)
+title(<span class="string">'TFD Senoidal - M&oacute;dulo'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'|X[k]|'</span>)
+
+subplot(2,2,2)
+stem(k3,F3)
+title(<span class="string">'TDF Senoidal - Fase'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'\phi(X[k])'</span>)
+
+subplot(2,2,3)
+stem(k3,Re3)
+title(<span class="string">'TFD Senoidal - Parte Real'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X[k]_R_e_a_l'</span>)
+
+subplot(2,2,4)
+stem(k3,Im3)
+title(<span class="string">'TDF Senoidal - Parte Imaginaria'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X[k]_I_m_a_g_i_n_a_r_i_a'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_35.png" alt=""> <p>AMPLITUD MODULADA</p><pre class="codeinput">[am,ti]=Amplitud_Modulada(60,10,5,1,1/200,1/20);
+[X4,k4,Re4,Im4,M4,F4]=TFD(am);
+
+figure
+subplot(2,2,1)
+stem(k4,M4)
+title(<span class="string">'TFD Amplitud Modulada - M&oacute;dulo'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'|X[k]|'</span>)
+
+subplot(2,2,2)
+stem(k4,F4)
+title(<span class="string">'TDF Amplitud Modulada - Fase'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'\phi(X[k])'</span>)
+
+subplot(2,2,3)
+stem(k4,Re4)
+title(<span class="string">'TFD Amplitud Modulada - Parte Real'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X[k]_R_e_a_l'</span>)
+
+subplot(2,2,4)
+stem(k4,Im4)
+title(<span class="string">'TDF Amplitud Modulada - Parte Imaginaria'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X[k]_I_m_a_g_i_n_a_r_i_a'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_36.png" alt=""> <p>FRECUENCIA MODULADA</p><pre class="codeinput">[fm,ti2]=Frecuencia_Modulada(60,10,5,1,1/200,1/20);
+[X5,k5,Re5,Im5,M5,F5]=TFD(fm);
+
+figure
+subplot(2,2,1)
+stem(k5,M5)
+title(<span class="string">'TFD Frecuencia Modulada - M&oacute;dulo'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'|X[k]|'</span>)
+
+subplot(2,2,2)
+stem(k5,F5)
+title(<span class="string">'TDF Frecuencia Modulada - Fase'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'\phi(X[k])'</span>)
+
+subplot(2,2,3)
+stem(k5,Re5)
+title(<span class="string">'TFD Frecuencia Modulada - Parte Real'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X[k]_R_e_a_l'</span>)
+
+subplot(2,2,4)
+stem(k5,Im5)
+title(<span class="string">'TDF Frecuencia Modulada - Parte Imaginaria'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X[k]_I_m_a_g_i_n_a_r_i_a'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_37.png" alt=""> <p>SINC</p><pre class="codeinput">[sinc,tiempo]=Funcion_Sampling_Sinc(100,10,1/10,2);
+[X6,k6,Re6,Im6,M6,F6]=TFD(sinc);
+
+figure
+subplot(2,2,1)
+stem(k6,M6)
+title(<span class="string">'TFD Sinc - M&oacute;dulo'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'|X[k]|'</span>)
+
+subplot(2,2,2)
+stem(k6,F6)
+title(<span class="string">'TDF Sinc - Fase'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'\phi(X[k])'</span>)
+
+subplot(2,2,3)
+stem(k6,Re6)
+title(<span class="string">'TFD Sinc - Parte Real'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X[k]_R_e_a_l'</span>)
+
+subplot(2,2,4)
+stem(k6,Im6)
+title(<span class="string">'TDF Sinc - Parte Imaginaria'</span>)
+xlabel(<span class="string">'k'</span>);ylabel(<span class="string">'X[k]_I_m_a_g_i_n_a_r_i_a'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_38.png" alt=""> <h2>Ejercicio 15<a name="49"></a></h2><p>Filtros de Fase Cero: Pasa Bajos, Pasa Altos, Elimina Banda y Pasa Banda.</p><pre class="codeinput"><span class="comment">%Valores de prueba</span>
+w1=20;
+w2=40;
+N=100;
+w=0:99;
+
+<span class="comment">% Filtro pasa bajos de fase cero</span>
+[PBAJOS]=FPBAJOSfc(w1,N);
+figure
+subplot(2,2,1)
+plot(w,PBAJOS)
+title(<span class="string">'Filtro Pasa Bajos de Fase Cero'</span>);
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'|H[w]|'</span>);ylim([0 1.2]);xlim([0 99]);
+
+<span class="comment">%Filtro elimina banda de fase cero</span>
+[EBANDA]=FEBANDAfc(w1,w2,N);
+subplot(2,2,2)
+plot(w,EBANDA)
+title(<span class="string">'Filtro Elimina Banda de Fase Cero'</span>);
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'|H[w]|'</span>);ylim([0 1.2]);xlim([0 99]);
+
+<span class="comment">%Filtro pasa altos de fase cero</span>
+[PALTOS]=FPALTOSfc(w1,N);
+subplot(2,2,3)
+plot(w,PALTOS)
+title(<span class="string">'Filtro Pasa Altos de Fase Cero'</span>);
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'|H[w]|'</span>);ylim([0 1.2]);xlim([0 99]);
+
+<span class="comment">%Filtro pasa banda de fase cero</span>
+[PBANDA]=FPBANDAfc(w1,w2,N);
+subplot(2,2,4)
+plot(w,PBANDA)
+title(<span class="string">'Filtro Pasa Banda de Fase Cero'</span>);
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'|H[w]|'</span>);ylim([0 1.2]);xlim([0 99]);
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_39.png" alt=""> <pre class="codeinput"><span class="comment">% Genero funci&oacute;n de prueba para filtrar</span>
+fs=1000;
+fo=50;
+n=1:N;
+w0=2*pi*fo/fs;
+y=sin(w0*n);
+figure
+stem(w,y,<span class="string">'m'</span>)
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_40.png" alt=""> <p>Aplico los filtros</p><pre class="codeinput">senPB=PBAJOS.*y;
+senEB=EBANDA.*y;
+senPA=PALTOS.*y;
+senPBND=PBANDA.*y;
+</pre><p>Grafico los resultados obtenidos</p><pre class="codeinput">figure
+subplot(2,2,1)
+stem(w,senPB)
+title(<span class="string">'Seno con Filtro Pasa Bajos de Fase Cero'</span>);
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'Y[w]'</span>);
+subplot(2,2,2)
+stem(w,senEB)
+title(<span class="string">'Seno con Filtro Elimina Banda de Fase Cero'</span>);
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'Y[w]'</span>);
+subplot(2,2,3)
+stem(w,senPA)
+title(<span class="string">'Seno con Filtro Pasa Altos de Fase Cero'</span>);
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'Y[w]'</span>);
+subplot(2,2,4)
+stem(w,senPBND)
+title(<span class="string">'Seno con Filtro Pasa Banda de Fase Cero'</span>);
+xlabel(<span class="string">'w'</span>);ylabel(<span class="string">'Y[w]'</span>);
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_41.png" alt=""> <h2>Ejercicio 16<a name="55"></a></h2><pre class="codeinput"><span class="comment">% Filtrado por nivel</span>
+<span class="comment">% Los conponentes de frecuencia de la se&ntilde;al evaluada (espectro de amplitud</span>
+<span class="comment">% de la se&ntilde;al) ser&aacute;n llevados a 0 si no superan un determinado valor L.</span>
+
+L=15; <span class="comment">%Filtro aquellos valores menores</span>
+
+x=[2 3 -3 2 11 1 4.3 -6 6 9 5 4.5]; <span class="comment">%Vector de prueba</span>
+
+n=0:length(x)-1;
+
+[Xmodulo,Xf]=Filtrado_por_Nivel(x,L);
+</pre><pre class="codeinput"><span class="comment">%Grafico los resultados</span>
+figure
+subplot(2,1,1)
+stem(n,Xmodulo)
+title(<span class="string">'fft de la Se&ntilde;al original'</span>);
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'X_O_r_i_g_i_n_a_l[n]'</span>);
+subplot(2,1,2)
+stem(n,Xf)
+title(<span class="string">'fft de la Se&ntilde;al filtrada'</span>);
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'X_F_i_l_t_r_a_d_a[n]'</span>);
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_42.png" alt=""> <h2>Ejercicio 17<a name="58"></a></h2><p>Filtro de nivel programado en el ejercicio anterior a una se&ntilde;al de audio y verificaci&oacute;n del efecto de utilizar diferentes niveles para umbralizar.</p><pre class="codeinput"><span class="comment">%Abro archivo de audio y extraigo los datos</span>
+yaudio=wavread(<span class="string">'introBlackDog.wav'</span>);
+</pre><pre class="codeoutput">Warning: WAVREAD will be removed in a future release. Use AUDIOREAD instead. 
+</pre><pre class="codeinput"><span class="comment">%Tomo s&oacute;lo una de las columnas y convierto a vector fila (sonido mono)</span>
+y=yaudio(:,1);
+y=y';
+figure
+plot(y(1:5000),<span class="string">'m'</span>)
+title(<span class="string">'Sonido original'</span>);
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'X_O_r_i_g_i_n_a_l[n]'</span>);
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_43.png" alt=""> <p>Pruebo el filtrado por distintos niveles</p><pre class="codeinput"><span class="comment">%L=50</span>
+L=50;
+[Xmodulo1,Xf50]=Filtrado_por_Nivel(y,L);
+xf50=ifft(Xf50); <span class="comment">%Antitransformo para obtener la se&ntilde;al filtrada de salida</span>
+sound(xf50,44100); <span class="comment">%Fs=44100Hz Usado en audio</span>
+
+<span class="comment">% Se logra escuchar lo deseado pero con mucho ruido blanco de fondo.</span>
+
+figure
+subplot(2,1,1)
+stem(Xf50(1:5000),<span class="string">'r'</span>)
+title(<span class="string">'Espectro de la se&ntilde;al para umbral=50'</span>)
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'X_L_=_5_0[n]'</span>);
+subplot(2,1,2)
+plot(xf50(1:5000),<span class="string">'b'</span>)
+title(<span class="string">'Se&ntilde;al filtrada en tiempo para umbral=50'</span>)
+xlabel(<span class="string">'t'</span>);ylabel(<span class="string">'x_L_=_5_0(t)'</span>);ylim([-3 3])
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_44.png" alt=""> <pre class="codeinput"><span class="comment">%L=300</span>
+L=300;
+[Xmodulo2,Xf300]=Filtrado_por_Nivel(y,L);
+xf300=ifft(Xf300); <span class="comment">%Antitransformo para obtener la se&ntilde;al filtrada de salida</span>
+sound(xf300,44100); <span class="comment">%Fs=44100Hz Usado en audio</span>
+
+<span class="comment">% Contin&uacute;a habiendo ruido blanco de fondo pero &eacute;ste disminuye en</span>
+<span class="comment">% comparaci&oacute;n con el nivel implementado anteriormente</span>
+
+figure
+subplot(2,1,1)
+stem(Xf300(1:5000),<span class="string">'r'</span>)
+title(<span class="string">'Espectro de la se&ntilde;al para umbral=300'</span>)
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'X_L_=_3_0_0[n]'</span>);
+subplot(2,1,2)
+plot(xf300(1:5000),<span class="string">'b'</span>)
+title(<span class="string">'Se&ntilde;al filtrada en tiempo para umbral=300'</span>)
+xlabel(<span class="string">'t'</span>);ylabel(<span class="string">'x_L_=_3_0_0(t)'</span>);ylim([-6 6])
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_45.png" alt=""> <pre class="codeinput"><span class="comment">%L=900</span>
+L=900;
+[Xmodulo3,Xf900]=Filtrado_por_Nivel(y,L);
+xf900=ifft(Xf900); <span class="comment">%Antitransformo para obtener la se&ntilde;al filtrada de salida</span>
+sound(xf900,44100); <span class="comment">%Fs=44100Hz Usado en audio</span>
+
+<span class="comment">% Con este nivel de filtro ya no se oye ruido blanco de fondo, pero se debe</span>
+<span class="comment">% tener en cuenta de que, a partir de cierto valor de umbral se podr&iacute;an</span>
+<span class="comment">% estar filtrando sonidos deseados.</span>
+
+figure
+subplot(2,1,1)
+stem(Xf900(1:5000),<span class="string">'r'</span>)
+title(<span class="string">'Espectro de la se&ntilde;al para umbral=900'</span>)
+xlabel(<span class="string">'n'</span>);ylabel(<span class="string">'X_L_=_9_0_0[n]'</span>);
+subplot(2,1,2)
+plot(xf900(1:5000),<span class="string">'b'</span>)
+title(<span class="string">'Se&ntilde;al filtrada en tiempo para umbral=900'</span>)
+xlabel(<span class="string">'t'</span>);ylabel(<span class="string">'x_L_=_9_0_0(t)'</span>);
+</pre><img vspace="5" hspace="5" src="TP2parte1varela_46.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% PDS - TP Nº2 (Parte 1) - Sofía Ayelén Varela
+
+%% Ejercicio 3
+
+L=10; 
+a=zeros(1,L);
+a(1)=1;
+a(2)=-1/2;
+a(3:L)=0;
+N=0:L-1; %vector largo L
+%%
+%Gráfico de la secuencia
+
+figure
+subplot(2,1,1)
+stem(N,a,'m')
+title('Señal de entrada');xlabel('n');ylabel('a[n]')
+
+A=fft(a); %Transformada Discreta de Fourier
+A=A.^(-1); %Inversa
+b=ifft(A); %Antitransformada
+
+c=conv(a,b); %Convolución: debe dar un delta como resultado
+n=0:18; %Largo N+M-1 de la convolución
+
+%Gráfico de la convolución entre la señal y su inversa
+
+subplot(2,1,2)
+stem(n,c,'r')
+title('Convolución de la secuencia con su inversa');xlabel('n');ylabel('Conv[n]')
+%%
+%% Ejercicio 4
+
+a=[2 5 3];
+n=0:2;
+figure
+subplot(3,1,1)
+stem(n,a,'c')
+title('Señal de entrada');xlabel('n');ylabel('a[n]')
+
+%Sobremuestreo
+
+L=2;
+[y,N]=Sobremuestrear(a,L);
+subplot(3,1,2)
+stem(N,y,'m')
+title('Señal sobremuestreada con algoritmo propio');xlabel('n');ylabel('y[n]')
+
+%Verifico algoritmo propio con rutina prediseñada de Matlab 'upsample'
+
+ymat=upsample(a,2);
+subplot(3,1,3)
+stem(N,y,'r')
+title('Señal sobremuestreada con función upsample');xlabel('n');ylabel('y[n]')
+%%
+%% Ejercicio 5
+
+a=[1 3 5 7 9 8 6];
+l=0:6;
+figure
+subplot(3,1,1)
+stem(l,a,'c')
+title('Señal de entrada');xlabel('n');ylabel('a[n]')
+
+%Submuestreo
+
+M=2;
+[y,N]=Submuestrear(a,M);
+subplot(3,1,2)
+stem(N,y,'m')
+title('Señal submuestreada con algoritmo propio');xlabel('n');ylabel('y[n]')
+
+%Verifico algoritmo propio con rutina prediseñada de Matlab 'downsample'
+
+ymat=downsample(a,2);
+subplot(3,1,3)
+stem(N,y,'r')
+title('Señal submuestreada con función downsample');xlabel('n');ylabel('y[n]')
+%%
+%% Ejercicio 6
+% Se tomaron los algoritmos del campus ('DFT.m' y 'graficar.m') y se
+% modificó su implementación para el correcto funcionamiento.
+
+x=[9 2 3 4 6 5*i]; %Secuencia compleja de prueba
+
+[X,k,Re,Im,M,F]=TFD(x);
+%%
+% Verifico el algoritmo diseñado con función predefinida de Matlab fft
+
+% Gráfico de la señal y su TFD
+n=0:5;
+figure
+subplot(3,1,1)
+stem(n,x)
+title('Secuencia original')
+xlabel('n');ylabel('x[n]')
+subplot(3,1,2)
+stem(k,X)
+title('TFD de la secuencia')
+xlabel('k');ylabel('X[k]')
+
+% TFD Matlab
+Xmatlab=fft(x);
+subplot(3,1,3)
+stem(k,Xmatlab)
+title('fft_M_a_t_l_a_b de la secuencia')
+xlabel('k');ylabel('X_M_a_t_l_a_b[k]')
+%%
+%Gráficos de la parte real e imaginaria de la TFD
+
+figure
+subplot(2,1,1)
+stem(k,Re)
+title('TFD parte Real')
+xlabel('k');ylabel('X_R_e_a_l[k]')
+subplot(2,1,2)
+stem(k,Im)
+title('TFD parte Imaginaria')
+xlabel('k');ylabel('X_I_m_a_g_i_n_a_r_i_a[k]')
+%%
+%Gráficos del módulo de la TFD
+
+figure
+subplot(2,1,1)
+stem(k,M)
+title('TFD Módulo')
+xlabel('k');ylabel('|X[k]|')
+subplot(2,1,2)
+stem(k,20*log10(M))
+title('TFD Módulo en dB')
+xlabel('k');ylabel('|X_d_B[k]|')
+%%
+%Gráficos de la fase de la TFD
+
+figure
+subplot(2,1,1)
+stem(k,F)
+title('TFD Fase')
+xlabel('k');ylabel('\phi(X[k])')
+subplot(2,1,2)
+stem(k,20*log10(F))
+title('TFD Fase en dB')
+xlabel('k');ylabel('\phi(X[k])_d_B')
+%%
+%% Ejercicio 7
+% Implementación de la Inversa de la Transformada de Fourier Discreta.
+% Luego, verificación de que, si la TFD provino de una señal real, la parte 
+% imaginaria de su antitransformada debe ser 0 para todo n.
+
+X=[9 12 3 8 6 9*i]; %Secuencia compleja de prueba
+
+[x,n,re,im,m,f]=TFDinversa(X);
+%%
+% Gráfico de la TFD y la secuencia antitransformada
+
+k=0:5;
+figure
+subplot(3,1,1)
+stem(k,X)
+title('TFD')
+xlabel('k');ylabel('X[k]')
+subplot(3,1,2)
+stem(n,x)
+title('Secuencia antitransformada con TFDinversa')
+xlabel('n');ylabel('x[n]')
+
+% TFD Matlab
+
+xmatlab=ifft(X);
+subplot(3,1,3)
+stem(n,xmatlab)
+title('Secuencia antitransformada con ifft_M_a_t_l_a_b')
+xlabel('n');ylabel('x_M_a_t_l_a_b[n]')
+%%
+% Gráficos de la parte real e imaginaria de la TFDinversa
+
+figure
+subplot(2,1,1)
+stem(n,re)
+title('ITFD parte Real')
+xlabel('n');ylabel('x_R_e_a_l[n]')
+subplot(2,1,2)
+stem(n,im)
+title('ITFD parte Imaginaria')
+xlabel('n');ylabel('x_I_m_a_g_i_n_a_r_i_a[n]')
+%%
+% Gráficos de módulo y fase de la TFDinversa
+
+figure
+subplot(2,1,1)
+stem(n,m)
+title('TFDinversa Módulo')
+xlabel('n');ylabel('|x[n]|')
+subplot(2,1,2)
+stem(n,f)
+title('TFDinversa Fase')
+xlabel('n');ylabel('\phi(x[n])')
+%%
+
+% Verifico que si TFD es real, la parte imaginaria de su antitransformada
+% debe ser 0 para todo n
+
+Xre=[9 10 3 4 6 2]; %Secuencia real de prueba
+
+[x2,n2,re2,im2]=TFDinversa(Xre);
+%%
+% Gráficos de la parte real e imaginaria de la TFDinversa real
+
+figure
+subplot(2,1,1)
+stem(n2,re2)
+title('ITFD parte Real')
+xlabel('n');ylabel('x2_R_e_a_l[n]')
+subplot(2,1,2)
+stem(n2,im2)
+title('ITFD parte Imaginaria=0 para todo n')
+xlabel('n');ylabel('x2_I_m_a_g_i_n_a_r_i_a[n]')
+%%
+%% Ejercicio 8
+
+%a)
+Da=[1 0.13 0.52 0.3]; %y
+Pa=[0.16 -0.48 0.48 -0.16]; %x
+fvtool(Pa,Da)%(b->x, a->y)
+title('Filtro pasa altos')
+%%
+%b)
+Db=[1 0 -0.268];
+Pb=[0.634 0 -0.634];
+fvtool(Pb,Db)%(b->x, a->y)
+title('Filtro pasa banda')
+%%
+%c)
+Dc=[1 0 0.268];
+Pc=[0.634 0 +0.634];
+fvtool(Pc,Dc)%(b->x, a->y)
+title('Filtro Notch')
+%%
+%d)
+Dd=[10 -5 1];
+Pd=[1 -5 10];
+fvtool(Pd,Dd)%(b->x, a->y)
+title('Filtro pasa todo')
+%%
+%% Ejercicio 9
+
+%r: radio
+%fi: fase
+
+%Filtro G=1/(1-2*r*cos(fi)*exp(-z)+r^2*exp(-2*z));
+%%
+% Mismo radio, cambio de fase
+
+%Datos: r=0.8; fi=pi/4
+b=[1];
+a1=[1 -2*0.8*cos(pi/4) 0.8^2];
+fvtool(b,a1,'polezero')
+title('r=0.8 fi=pi/4')
+fvtool(b,a1,'freq')
+title('r=0.8 fi=pi/4')
+legend('Magnitud','Fase')
+
+%Datos: r=0.8; fi=pi/2 
+a2=[1 -2*0.8*cos(pi/2) 0.8^2];
+fvtool(b,a2,'polezero')
+title('r=0.8 fi=pi/2')
+fvtool(b,a2,'freq')
+title('r=0.8 fi=pi/2')
+legend('Magnitud','Fase')
+
+%Datos: r=0.8; fi=7*pi/8
+a3=[1 -2*0.8*cos(7*pi/8) 0.8^2];
+fvtool(b,a3,'polezero')
+title('r=0.8 fi=7*pi/8')
+fvtool(b,a3,'freq')
+title('r=0.8 fi=7*pi/8')
+legend('Magnitud','Fase')
+
+%% 
+% Misma fase, cambio de radio(fi=pi/2; r=0.8;0.6;0.9)
+
+%Datos: fi=pi/2 r=0.8; 
+b=[1];
+a4=[1 -2*0.8*cos(pi/2) 0.8^2];
+fvtool(b,a4,'polezero')
+title('r=0.8 fi=pi/2')
+fvtool(b,a4,'freq')
+title('r=0.8 fi=pi/2')
+legend('Magnitud','Fase')
+
+%Datos: fi=pi/2 r=0.6;
+a5=[1 -2*0.6*cos(pi/2) 0.6^2];
+fvtool(b,a5,'polezero')
+title('r=0.6 fi=pi/2')
+fvtool(b,a5,'freq')
+title('r=0.6 fi=pi/2')
+legend('Magnitud','Fase')
+
+%Datos: fi=pi/2 r=0.9;
+a6=[1 -2*0.9*cos(pi/2) 0.9^2];
+fvtool(b,a6,'polezero')
+title('r=0.9 fi=pi/2')
+fvtool(b,a6,'freq')
+title('r=0.9 fi=pi/2')
+legend('Magnitud','Fase')
+%%
+%% Ejercicio 11
+
+%a) Teniendo en cuenta el Teorema de Nyquist (fs>=2*fmax) y 
+%    Ts=1mS (fs=1/1ms=1000Hz), se necesita: fmax=500Hz para evitar el 
+%    solapamiento a la entrada del Filtro Notch.
+
+%b) 
+w0=2*pi/5;
+r = 0.7; %Radio definido entre 0<r<1
+B=[1 -(exp(-j*w0)+exp(j*w0)) 1];
+A=[1 -r*(exp(-j*w0)+exp(j*w0)) r^2];
+fvtool(B,A,'freq')
+title('Respuesta de amplitud y fase')
+legend('Magnitud','Fase')
+%%
+%c) y d)
+%pi - 500Hz (máx)
+%x? - 50Hz (componente a eliminar) =>x=0.1*pi
+
+%Gráfico de la respuesta de amplitud
+w02=0.1*pi;
+%Mismo radio definido anteriormente
+B2=[1 -(exp(-j*w02)+exp(j*w02)) 1];
+A2=[1 -r*(exp(-j*w02)+exp(j*w02)) r^2];
+fvtool(B2,A2,'magnitude')
+title('Respuesta de amplitud del Filtro Notch con w0=pi/10')
+%%
+%e)Senoidal de 150 muestras con f=50Hz y fs=1000Hz;
+
+N=150;fo=50;fs=1000;
+
+w=2*pi*fo/fs;
+n=1:N;
+
+x=sin(w*n);
+x_filtrada=filter(B2,A2,x);
+
+figure
+subplot(2,1,1)
+stem(n,x)
+title('Senoidal sin filtro')
+xlabel('n');ylabel('x[n]')
+subplot(2,1,2)
+stem(n,x_filtrada)
+title('Senoidal con filtro Notch')
+xlabel('n');ylabel('x[n]')
+%%
+%e)
+posicion=Transitorio(x,x_filtrada);
+Ts=1/fs;
+Duracion=posicion*Ts
+%%
+%% Ejercicio 12
+
+a=[10 -2 4];b=[1 9 -2];
+N=200;
+
+h=impz(b,a,N); %Respuesta al impulso del sistema b/a
+%%
+% Retardo de grupo de la respuesta al impulso
+
+r=Retardo_Grupo(h,N);
+w=0:(2*pi)/(N-1):2*pi; %Intervalo 0<w<2*pi
+
+figure
+subplot(2,1,1)
+plot(w,r,'r')
+title('Retardo de Grupo con función propia')
+xlabel('w');ylabel('Retardo[w]')
+
+% Comparo el algoritmo desarrollado con la función predefinida grpdelay
+
+[Gd,W]=grpdelay(b,a,N,'whole'); %'whole' para N puntos en todo 
+                                %el circulo radio unidad
+subplot(2,1,2)
+plot(W,Gd,'m')
+title('Retardo de Grupo con función grpdelay')
+xlabel('w');ylabel('Retardo_g_r_p_d_e_l_a_y[w]')
+%%
+%% Ejercicio 13
+%%
+% Respuesta al impulso h[n]=delta[n-4]
+
+h=[0; 0; 0; 1]; %Vector columna
+N=length(h);
+r=Retardo_Grupo(h,N);
+
+n=0:N-1;
+figure
+subplot(2,1,1)
+plot(n,r)
+title('Retardo de Grupo con función propia')
+xlabel('n');ylabel('Retardo[n]')
+xlim([0 3])
+
+[Gd,W]=grpdelay(h,N);
+subplot(2,1,2)
+plot(W,Gd)
+title('Retardo de Grupo con función grpdelay')
+xlabel('n');ylabel('Retardo_g_r_p_d_e_l_a_y[n]')
+xlim([0 3])
+%%
+%% Ejercicio 14
+% Transformadas Discretas de Fourier de funciones del Ejercicio 8) 
+% del TP Nº1. Se visualizan los resultados en Módulo y Fase o 
+% Parte Real e Imaginaria.
+%%
+% AMORTIGUADA
+[amort,n1]=Amortiguada(50,1,1/100,10,1/300);
+[X1,k1,Re1,Im1,M1,F1]=TFD(amort);
+
+figure
+subplot(2,2,1)
+stem(k1,M1)
+title('TFD Amortiguada - Módulo')
+xlabel('k');ylabel('|X[k]|')
+
+subplot(2,2,2)
+stem(k1,F1)
+title('TDF Amortiguada - Fase')
+xlabel('k');ylabel('\phi(X[k])')
+
+subplot(2,2,3)
+stem(k1,Re1)
+title('TFD Amortiguada - Parte Real')
+xlabel('k');ylabel('X[k]_R_e_a_l')
+
+subplot(2,2,4)
+stem(k1,Im1)
+title('TDF Amortiguada - Parte Imaginaria')
+xlabel('k');ylabel('X[k]_I_m_a_g_i_n_a_r_i_a')
+%%
+% ESCALÓN
+[esc,n2]=Escalon_Unitario(20,1,0);
+[X2,k2,Re2,Im2,M2,F2]=TFD(esc);
+
+figure
+subplot(2,2,1)
+stem(k2,M2)
+title('TFD Escalón - Módulo')
+xlabel('k');ylabel('|X[k]|')
+
+subplot(2,2,2)
+stem(k2,F2)
+title('TDF Escalón - Fase')
+xlabel('k');ylabel('\phi(X[k])')
+
+subplot(2,2,3)
+stem(k2,Re2)
+title('TFD Escalón - Parte Real')
+xlabel('k');ylabel('X[k]_R_e_a_l')
+
+subplot(2,2,4)
+stem(k2,Im2)
+title('TDF Escalón - Parte Imaginaria')
+xlabel('k');ylabel('X[k]_I_m_a_g_i_n_a_r_i_a')
+%%
+% SENOIDAL
+[sen,n3]=Senoidal_Discreta(0,40,3,pi/17,0);
+[X3,k3,Re3,Im3,M3,F3]=TFD(sen);
+
+figure
+subplot(2,2,1)
+stem(k3,M3)
+title('TFD Senoidal - Módulo')
+xlabel('k');ylabel('|X[k]|')
+
+subplot(2,2,2)
+stem(k3,F3)
+title('TDF Senoidal - Fase')
+xlabel('k');ylabel('\phi(X[k])')
+
+subplot(2,2,3)
+stem(k3,Re3)
+title('TFD Senoidal - Parte Real')
+xlabel('k');ylabel('X[k]_R_e_a_l')
+
+subplot(2,2,4)
+stem(k3,Im3)
+title('TDF Senoidal - Parte Imaginaria')
+xlabel('k');ylabel('X[k]_I_m_a_g_i_n_a_r_i_a')
+%%
+% AMPLITUD MODULADA
+[am,ti]=Amplitud_Modulada(60,10,5,1,1/200,1/20);
+[X4,k4,Re4,Im4,M4,F4]=TFD(am);
+
+figure
+subplot(2,2,1)
+stem(k4,M4)
+title('TFD Amplitud Modulada - Módulo')
+xlabel('k');ylabel('|X[k]|')
+
+subplot(2,2,2)
+stem(k4,F4)
+title('TDF Amplitud Modulada - Fase')
+xlabel('k');ylabel('\phi(X[k])')
+
+subplot(2,2,3)
+stem(k4,Re4)
+title('TFD Amplitud Modulada - Parte Real')
+xlabel('k');ylabel('X[k]_R_e_a_l')
+
+subplot(2,2,4)
+stem(k4,Im4)
+title('TDF Amplitud Modulada - Parte Imaginaria')
+xlabel('k');ylabel('X[k]_I_m_a_g_i_n_a_r_i_a')
+%%
+% FRECUENCIA MODULADA
+[fm,ti2]=Frecuencia_Modulada(60,10,5,1,1/200,1/20);
+[X5,k5,Re5,Im5,M5,F5]=TFD(fm);
+
+figure
+subplot(2,2,1)
+stem(k5,M5)
+title('TFD Frecuencia Modulada - Módulo')
+xlabel('k');ylabel('|X[k]|')
+
+subplot(2,2,2)
+stem(k5,F5)
+title('TDF Frecuencia Modulada - Fase')
+xlabel('k');ylabel('\phi(X[k])')
+
+subplot(2,2,3)
+stem(k5,Re5)
+title('TFD Frecuencia Modulada - Parte Real')
+xlabel('k');ylabel('X[k]_R_e_a_l')
+
+subplot(2,2,4)
+stem(k5,Im5)
+title('TDF Frecuencia Modulada - Parte Imaginaria')
+xlabel('k');ylabel('X[k]_I_m_a_g_i_n_a_r_i_a')
+%%
+% SINC
+[sinc,tiempo]=Funcion_Sampling_Sinc(100,10,1/10,2);
+[X6,k6,Re6,Im6,M6,F6]=TFD(sinc);
+
+figure
+subplot(2,2,1)
+stem(k6,M6)
+title('TFD Sinc - Módulo')
+xlabel('k');ylabel('|X[k]|')
+
+subplot(2,2,2)
+stem(k6,F6)
+title('TDF Sinc - Fase')
+xlabel('k');ylabel('\phi(X[k])')
+
+subplot(2,2,3)
+stem(k6,Re6)
+title('TFD Sinc - Parte Real')
+xlabel('k');ylabel('X[k]_R_e_a_l')
+
+subplot(2,2,4)
+stem(k6,Im6)
+title('TDF Sinc - Parte Imaginaria')
+xlabel('k');ylabel('X[k]_I_m_a_g_i_n_a_r_i_a')
+%%
+%% Ejercicio 15 
+% Filtros de Fase Cero: Pasa Bajos, Pasa Altos, Elimina Banda y Pasa Banda.
+%%
+%Valores de prueba
+w1=20;
+w2=40;
+N=100;
+w=0:99;
+
+% Filtro pasa bajos de fase cero
+[PBAJOS]=FPBAJOSfc(w1,N);
+figure
+subplot(2,2,1)
+plot(w,PBAJOS)
+title('Filtro Pasa Bajos de Fase Cero');
+xlabel('w');ylabel('|H[w]|');ylim([0 1.2]);xlim([0 99]);
+
+%Filtro elimina banda de fase cero
+[EBANDA]=FEBANDAfc(w1,w2,N);
+subplot(2,2,2)
+plot(w,EBANDA)
+title('Filtro Elimina Banda de Fase Cero');
+xlabel('w');ylabel('|H[w]|');ylim([0 1.2]);xlim([0 99]);
+
+%Filtro pasa altos de fase cero
+[PALTOS]=FPALTOSfc(w1,N);
+subplot(2,2,3)
+plot(w,PALTOS)
+title('Filtro Pasa Altos de Fase Cero');
+xlabel('w');ylabel('|H[w]|');ylim([0 1.2]);xlim([0 99]);
+
+%Filtro pasa banda de fase cero
+[PBANDA]=FPBANDAfc(w1,w2,N);
+subplot(2,2,4)
+plot(w,PBANDA)
+title('Filtro Pasa Banda de Fase Cero');
+xlabel('w');ylabel('|H[w]|');ylim([0 1.2]);xlim([0 99]);
+%%
+
+% Genero función de prueba para filtrar
+fs=1000;
+fo=50;
+n=1:N;
+w0=2*pi*fo/fs;
+y=sin(w0*n);
+figure
+stem(w,y,'m')
+%%
+% Aplico los filtros
+senPB=PBAJOS.*y;
+senEB=EBANDA.*y;
+senPA=PALTOS.*y;
+senPBND=PBANDA.*y;
+%%
+% Grafico los resultados obtenidos
+figure
+subplot(2,2,1)
+stem(w,senPB)
+title('Seno con Filtro Pasa Bajos de Fase Cero');
+xlabel('w');ylabel('Y[w]');
+subplot(2,2,2)
+stem(w,senEB)
+title('Seno con Filtro Elimina Banda de Fase Cero');
+xlabel('w');ylabel('Y[w]');
+subplot(2,2,3)
+stem(w,senPA)
+title('Seno con Filtro Pasa Altos de Fase Cero');
+xlabel('w');ylabel('Y[w]');
+subplot(2,2,4)
+stem(w,senPBND)
+title('Seno con Filtro Pasa Banda de Fase Cero');
+xlabel('w');ylabel('Y[w]');
+%%
+%% Ejercicio 16
+
+% Filtrado por nivel
+% Los conponentes de frecuencia de la señal evaluada (espectro de amplitud 
+% de la señal) serán llevados a 0 si no superan un determinado valor L.
+
+L=15; %Filtro aquellos valores menores
+
+x=[2 3 -3 2 11 1 4.3 -6 6 9 5 4.5]; %Vector de prueba
+
+n=0:length(x)-1;
+
+[Xmodulo,Xf]=Filtrado_por_Nivel(x,L);
+%%
+%Grafico los resultados
+figure
+subplot(2,1,1)
+stem(n,Xmodulo)
+title('fft de la Señal original');
+xlabel('n');ylabel('X_O_r_i_g_i_n_a_l[n]');
+subplot(2,1,2)
+stem(n,Xf)
+title('fft de la Señal filtrada');
+xlabel('n');ylabel('X_F_i_l_t_r_a_d_a[n]');
+%%
+%% Ejercicio 17
+% Filtro de nivel programado en el ejercicio anterior a una señal de audio 
+% y verificación del efecto de utilizar diferentes niveles para umbralizar.
+%%
+%Abro archivo de audio y extraigo los datos
+yaudio=wavread('introBlackDog.wav');
+%%
+%Tomo sólo una de las columnas y convierto a vector fila (sonido mono)
+y=yaudio(:,1);
+y=y';
+figure
+plot(y(1:5000),'m')
+title('Sonido original');
+xlabel('n');ylabel('X_O_r_i_g_i_n_a_l[n]');
+%%
+% Pruebo el filtrado por distintos niveles
+
+%L=50
+L=50;
+[Xmodulo1,Xf50]=Filtrado_por_Nivel(y,L);
+xf50=ifft(Xf50); %Antitransformo para obtener la señal filtrada de salida
+sound(xf50,44100); %Fs=44100Hz Usado en audio
+
+% Se logra escuchar lo deseado pero con mucho ruido blanco de fondo.
+
+figure
+subplot(2,1,1)
+stem(Xf50(1:5000),'r')
+title('Espectro de la señal para umbral=50')
+xlabel('n');ylabel('X_L_=_5_0[n]');
+subplot(2,1,2)
+plot(xf50(1:5000),'b')
+title('Señal filtrada en tiempo para umbral=50')
+xlabel('t');ylabel('x_L_=_5_0(t)');ylim([-3 3])
+%%
+%L=300
+L=300;
+[Xmodulo2,Xf300]=Filtrado_por_Nivel(y,L);
+xf300=ifft(Xf300); %Antitransformo para obtener la señal filtrada de salida
+sound(xf300,44100); %Fs=44100Hz Usado en audio
+
+% Continúa habiendo ruido blanco de fondo pero éste disminuye en 
+% comparación con el nivel implementado anteriormente
+
+figure
+subplot(2,1,1)
+stem(Xf300(1:5000),'r')
+title('Espectro de la señal para umbral=300')
+xlabel('n');ylabel('X_L_=_3_0_0[n]');
+subplot(2,1,2)
+plot(xf300(1:5000),'b')
+title('Señal filtrada en tiempo para umbral=300')
+xlabel('t');ylabel('x_L_=_3_0_0(t)');ylim([-6 6])
+%%
+%L=900
+L=900;
+[Xmodulo3,Xf900]=Filtrado_por_Nivel(y,L);
+xf900=ifft(Xf900); %Antitransformo para obtener la señal filtrada de salida
+sound(xf900,44100); %Fs=44100Hz Usado en audio
+
+% Con este nivel de filtro ya no se oye ruido blanco de fondo, pero se debe
+% tener en cuenta de que, a partir de cierto valor de umbral se podrían 
+% estar filtrando sonidos deseados.
+
+figure
+subplot(2,1,1)
+stem(Xf900(1:5000),'r')
+title('Espectro de la señal para umbral=900')
+xlabel('n');ylabel('X_L_=_9_0_0[n]');
+subplot(2,1,2)
+plot(xf900(1:5000),'b')
+title('Señal filtrada en tiempo para umbral=900')
+xlabel('t');ylabel('x_L_=_9_0_0(t)');
+%%
+##### SOURCE END #####
+--></body></html>
